@@ -46,7 +46,7 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 				<section class="samlingssidor_output">
 					<ul class="row">		
 						<?php			
-						include_once('dump_r.php');
+						include_once('dump_r.php'); //debugverktyg ska tas bort när allt är klart
 						function shorten_Post_Content($string, $link) {
 							//$string = strip_tags($string);
 							if (strlen($string) > 200) {
