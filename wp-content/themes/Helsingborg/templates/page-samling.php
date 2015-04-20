@@ -43,7 +43,6 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 		            </article>
 	            <?php endwhile; // End the loop ?>
 	
-	
 				<section class="samlingssidor_output">
 					<ul class="row">		
 						<?php			
