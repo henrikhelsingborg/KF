@@ -1,0 +1,46 @@
+
+/* header */
+
+.site-logo {
+	padding-top: rem-calc(10);
+	padding-bottom: rem-calc(10);
+}
+
+.logo-link {
+	display: block;
+}
+
+/* No SVG support fallback */
+.no-svg {
+	.logo-link {
+		background: url(#{$wp-root-url}/#{$wp-theme-img-url}/hbg-logo.png) no-repeat center center;
+		max-width: 254px;
+		height: 80px;
+	}
+}
+
+/* Headers set for each domain */
+.header-image {
+	padding-left: 0;
+	padding-right: 0;
+	.img-slide {
+		border-radius: 4px;
+	}
+}
+
+
+/* MQ - header */
+
+@media #{$small-only} {
+
+	.logo-link {
+		img {
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	.search-inputs,
+	.mobile-search {
+		display: none;
+	}
+}

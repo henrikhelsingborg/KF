@@ -1,0 +1,38 @@
+.samling_child_li {
+	margin-bottom: rem-calc(28);
+	list-style: none;
+}
+.samling_child_content {
+	padding: 0.625rem;
+	font-size: 0.875rem;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.4);
+	border: 1px solid #e6e6e6;
+	min-height: rem-calc(550);
+}
+
+a.clickable_excerpt_text {
+	text-decoration: none;
+	color: black;
+	&:hover {
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.samling_child_datum {
+	text-align: center;
+	padding: rem-calc(18);
+}
+.samling_child_button {
+	text-align: center;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}

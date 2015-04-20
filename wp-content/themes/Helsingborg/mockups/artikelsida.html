@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Helsingborg stad - artikelsida</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../css/app.css">
+       <!-- <link rel="stylesheet" href="../css/normalize.css">-->
+
+        <script src="../js/modernizr/modernizr.min.js"></script>
+        <script src="../js/jquery/dist/jquery.min.js"></script>
+
+        <!-- LET's PHPify this -->
+        <style>
+           .divider.fade .upper-divider,
+           .divider.fade .lower-divider {
+                background: rgb(237,139,0); /* Old browsers */ /* HEX värde här */
+                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlZDhiMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+                background: -moz-linear-gradient(left,  rgba(237,139,0,1) 60%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(60%,rgba(237,139,0,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* IE10+ */
+                background: linear-gradient(to right,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed8b00', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+                }
+                .divider .upper-divider,
+                .divider .lower-divider,
+                .button, .button:hover {
+                    background-color: rgba(237,139,0, 1);
+                }
+
+        </style>
+
+    </head>
+    <body>
+
+
+        <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+
+
+        <aside class="left-off-canvas-menu">
+            <ul class="mobile-nav-list" role="navigation">
+                <li><a href="#">Arbete</a></li>
+                <li><a href="#">Bygga, Bo och miljö</a></li>
+                <li><a href="#">Förskola och utbildning</a></li>
+                <li><a href="#">Kommun och politik</a></li>
+                <li><a href="#">Omsorg och stöd</a></li>
+                <li class="current-node">
+                    <a href="#">Trafik och stadsplanering</a>
+
+                    <ul>
+                        <li><a href="#">Biltrafik</a></li>
+                        <li><a href="#">Buss, båt och tåg</a></li>
+                        <li><a href="#">Cykling</a></li>
+                        <li><a href="#">Gator och trottoarer</a></li>
+                        <li><a href="#">Parkering</a></li>
+                        <li>
+                            <a href="#">Planering och utveckling</a>
+                            <ul>
+                                <li><a href="#">Detaljplanering</a></li>
+                                <li class="current">
+                                    <a href="#">Översiktsplanering</a>
+                                    <ul>
+                                        <li><a href="#">Gällande översiksplaner</a></li>
+                                        <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#">Renhållning och snöröjning</a></li>
+                                <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Parkering</a></li>
+                        <li><a href="#">Test nod</a></li>
+                        <li><a href="#">Test nod</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">Uppleva och göra</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+            </ul>
+        </aside>
+
+        <a class="exit-off-canvas"></a>
+        <nav class="mobile-nav" role="navigation">
+            <div class="mobile-navigation clearfix" role="navigation">
+                <a href="#" class="show-mobile-nav left-off-canvas-toggle">Meny</a>
+                <a href="#" class="show-mobile-search">Sök</a>
+            </div>
+            <div class="mobile-search">
+                        <div class="mobile-search-input-container">
+                            <input type="text" class="mobile-search-input" placeholder="Din S&ouml;kning"/>
+                            <input type="submit" class="mobile-search-btn" value="s&ouml;k" />
+                        </div>
+                    </div>
+        </nav><!-- mobile top nav -->
+
+        <div class="main-site-container">
+            <div class="site-bg"></div>
+
+
+            <div class="site-header row">
+                <div class="site-logo large-4 medium-4 columns">
+                    <a href="#" class="logo-link">
+                        <img src="../assets/img/images/hbg-logo.svg" alt="helsingborg stad" class="logo" />
+                    </a>
+                </div><!-- /.site-logo -->
+                <div class="support-nav large-8 medium-8 columns">
+
+                    <a href="#" class="show-support-nav"> <span class="arrow-icon"></span>Hjälpmeny </a>
+
+                    <ul class="support-nav-list inline-list">
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Larm</a></li>
+                        <li><a href="#">Teckenspråk</a></li>
+                        <li><a href="#">Lättläst</a></li>
+                        <li><a href="#">RSS</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Translate</a></li>
+
+                    </ul>
+                </div><!-- /.support-nav -->
+            </div><!-- /.site-header -->
+
+            <div class="article-page-layout row">
+                <!-- main-page-layout -->
+                    <div class="main-area large-9 columns">
+
+
+                    <div class="main-content row">
+                        <!-- SIDEBAR LEFT -->
+                        <div class="sidebar sidebar-left large-4 medium-4 columns">
+                            <div class="search-container row">
+                                <div class="search-inputs large-12 columns">
+                                    <input type="text" placeholder="Vad letar du efter?" name="search"/>
+                                    <input type="submit" value="Sök">
+                                </div>
+                            </div><!-- /.search-container -->
+
+                            <div class="row">
+
+                                <!-- large-up menu-->
+                                <nav class="main-nav large-12 columns show-for-medium-up" role="navigation">
+                                    <ul class="main-nav-list">
+                                        <li><a href="#">Arbete</a></li>
+                                        <li><a href="#">Bygga, Bo och miljö</a></li>
+                                        <li><a href="#">Förskola och utbildning</a></li>
+                                        <li><a href="#">Kommun och politik</a></li>
+                                        <li><a href="#">Omsorg och stöd</a></li>
+                                        <li class="current-node">
+                                            <a href="#">Trafik och stadsplanering</a>
+
+                                            <ul>
+                                                <li><a href="#">Biltrafik</a></li>
+                                                <li><a href="#">Buss, båt och tåg</a></li>
+                                                <li><a href="#">Cykling</a></li>
+                                                <li><a href="#">Gator och trottoarer</a></li>
+                                                <li><a href="#">Parkering</a></li>
+                                                <li>
+                                                    <a href="#">Planering och utveckling</a>
+
+                                                    <ul>
+                                                        <li><a href="#">Detaljplanering</a></li>
+                                                        <li class="current">
+                                                            <a href="#">Översiktsplanering</a>
+                                                            <ul>
+                                                                <li><a href="#">Gällande översiksplaner</a></li>
+                                                                <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Renhållning och snöröjning</a></li>
+                                                        <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Parkering</a></li>
+
+                                            </ul>
+
+                                        </li>
+                                        <li><a href="#">Uppleva och göra</a></li>
+                                    </ul>
+
+                                </nav><!-- /.navigation -->
+                                <!-- END large up menu-->
+
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar-left -->
+
+                        <div class="large-8 medium-8 columns">
+
+                            <!-- Slider -->
+                            <div class="row">
+                            <div class="large-12 columns slider-container">
+                                <!-- START ORBIT -->
+                                 <ul class="example-orbit" data-orbit>
+                                  <li>
+                                    <img src="http://www.placehold.it/1024x400&text=Slide+1" alt="slide 1" class="img-slide" />
+                                    <div class="orbit-caption">
+                                      Caption One.
+                                    </div>
+                                  </li>
+                                </ul>
+                                <!-- END ORBIT -->
+                            </div><!-- /.slider-container -->
+                            </div><!-- /.row -->
+
+
+                            <article class="article">
+
+                              <ul class="accessability-menu">
+                                <li>
+                                  <a href="#" class="icon speaker" title="lyssna på innehållet">Lyssna på</a>
+                                </li>
+                              </ul>
+
+                            <h1 class="article-title">Översiktsplanering</h1>
+
+                            <div class="ingress">
+                                En översiktsplan beskriver utveckling av den fysiska miljön på lång sikt. Den ger vägledning för hur mark- och vattenområden ska användas samt hur den byggda miljön ska användas, utvecklas och bevaras.
+                            </div><!-- /.ingress -->
+                            <div class="article-body">
+                                <p>
+                                Alla kommuner ska ha en aktuell översiktsplan som omfattar hela kommunen, vilket anges i plan- och bygglagen. Kommunfullmäktige måste varje mandatperiod besluta om planens aktualitet, det vill säga ta ställning till om översiktsplanen är aktuell eller ej.
+                                </p>
+                                <p>
+                                    En översiktsplan är inte juridiskt bindande men ska vara en långsiktig ledstjärna som ger stöd och är underlag för kommande planering (till exempel i bygglov och detaljplaner). Översiktsplanen ger invånare, näringsliv och myndigheter vägledning i hur kommunen kommer att ställa sig till olika förfrågningar.
+                                </p>
+                                <h2>Helsingborgs översiktsplan</h2>
+                                <p>Helsingborgs översiktsplan består av <a title="Läs om ÖP 2010 här." href="/Medborgare/Trafik-och-stadsplanering/Oversiktsplan-och-detaljplaner/Oversiktsplanering/gallande-oversiktsplaner/Oversiktsplan-2010/">ÖP 2010</a>, som gäller hela kommunens yta samt&nbsp; fördjupade översiktsplaner (numera kallat ändring av översiktsplan) som gäller för delområden som&nbsp;<a title="Läs om fördjupad översiktsplan för Gantofta här." href="/Medborgare/Trafik-och-stadsplanering/Oversiktsplan-och-detaljplaner/Oversiktsplanering/gallande-oversiktsplaner/gantofta/">Gantofta</a>&nbsp;, <a title="Läs om  fördjupad översiktsplan för H+ här." href="/Medborgare/Trafik-och-stadsplanering/Oversiktsplan-och-detaljplaner/Oversiktsplanering/gallande-oversiktsplaner/h/">H+</a> samt <a title="Läs om ändring av Helsingborgs översiktsplan, Allerum - Hjälmshult, här." href="/Medborgare/Trafik-och-stadsplanering/Oversiktsplan-och-detaljplaner/Oversiktsplanering/gallande-oversiktsplaner/allerum-hjalmshult/">Allerum – Hjälmshult</a>.&nbsp;Det finns&nbsp;även tematiskt tillägg till översiktsplanen avseende <a title="Läs om tematiskt tillägg avseende vindkraft här." href="/Medborgare/Trafik-och-stadsplanering/Oversiktsplan-och-detaljplaner/Oversiktsplanering/gallande-oversiktsplaner/vindkraft/">vindkraft</a>.</p>
+
+                                <h3>Rubrik som är H3</h3>
+                                <p>Helsingborgs översiktsplan förklarades som aktuell i&nbsp;februari 2014 av&nbsp;Helsingborgs kommunfullmäktige. <a title="Läs om aktualisering av Helsingborgs översiktsplan här." href="/Medborgare/Trafik-och-stadsplanering/Oversiktsplan-och-detaljplaner/Oversiktsplanering/gallande-oversiktsplaner/aktualisering/">Här kan du läsa&nbsp;mer om aktualisering av Helsingborgs översiktsplan.</a></p>
+                                <p>
+                                    ÖP 2010 är en strategisk översiktsplan som lägger grunden för rullande översiktsplanering. Det innebär att frågor av allmän och övergripande karaktär ska utredas vidare. Efter hand som behovet uppstår kan översiktsplanen kompletteras med planeringsunderlag och styrdokument, vilket har gjorts för exempelvis Allerum-Hjälmshult, Gantofta eller klimatpanpassning. </p>
+                                    <h4>Rubrik som är h4 med en massa text</h4>
+                                    <h5>Rubrik som är h5 med en massa text</h5>
+                                    <h6>Rubrik som är h6 med en massa text</h6>
+                                    <br/>
+                                <p>
+                                    ÖP 2010 redovisar tydliga strategier och övergripande geografiska ställningstaganden. Det innebär att översiktsplanens markanvändningskarta inte i detalj redovisar samtliga ställningstaganden och avvägningar på varje enskild yta, utan att många avvägningar får ske i kommande planering.
+                                </p>
+
+                                <p>
+                                    <ul class="disc">
+                                      <li>List item with a much longer description or more content.</li>
+                                      <li>List item</li>
+                                      <li>List item
+                                        <ul>
+                                          <li>Nested list item</li>
+                                          <li>Nested list item</li>
+                                          <li>Nested list item</li>
+                                        </ul>
+                                      </li>
+                                      <li>List item</li>
+                                      <li>List item</li>
+                                      <li>List item</li>
+                                     </ul>
+                                </p>
+
+                                <ul class="socialmedia-list">
+                                    <li class="fbook"><a href="#">Facebook</a></li>
+                                    <li class="twitter"><a href="#">Twitter</a></li>
+                                </ul>
+
+                            </div><!-- /.article-body -->
+
+                        </article>
+
+                        <!-- List "puffar" + "blockpuffar" se : http://www.helsingborg.se/Medborgare/Uppleva-och-gora/ + http://www.helsingborg.se/Medborgare/Trafik-och-stadsplanering/ -->
+
+                        <ul class="block-list page-block-list page-list large-block-grid-3 medium-block-grid-3 small-block-grid-2">
+                            <li>
+                                <a href="#" desc="link-desc">
+                                    <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                    <h2 class="list-title">Bibliotek</h2>
+                                    <div class="list-content">
+Fusce euismod ante sed aliquam porta. Nam dui mauris, posuere eget lobortis vel, vehicula congue dui. Phasellus pellentesque et lacus quis suscipit.
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" desc="link-desc">
+                                    <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                    <h2 class="list-title">Kultur i Helsingborg</h2>
+                                    <div class="list-content">
+Fusce euismod ante sed aliquam porta. Nam dui mauris, posuere eget lobortis vel, vehicula congue dui. Phasellus pellentesque et lacus quis suscipit.
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" desc="link-desc">
+                                    <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                    <h2 class="list-title">Friluftsliv i Helsingborg</h2>
+                                    <div class="list-content">
+Fusce euismod ante sed aliquam porta. Nam dui mauris, posuere eget lobortis vel, vehicula congue dui. Phasellus pellentesque et lacus quis suscipit.
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" desc="link-desc">
+                                    <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                    <h2 class="list-title">Fritidsgårdar och mötesplatser</h2>
+                                    <div class="list-content">
+Fusce euismod ante sed aliquam porta. Nam dui mauris, posuere eget lobortis vel, vehicula congue dui. Phasellus pellentesque et lacus quis suscipit.
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" desc="link-desc">
+                                    <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                    <h2 class="list-title">Anläggningar och sporthallar</h2>
+                                    <div class="list-content">
+Fusce euismod ante sed aliquam porta. Nam dui mauris, posuere eget lobortis vel, vehicula congue dui. Phasellus pellentesque et lacus quis suscipit.
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" desc="link-desc">
+                                    <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                    <h2 class="list-title">Fritidschecken pulshöjaren</h2>
+                                    <div class="list-content">
+Fusce euismod ante sed aliquam porta. Nam dui mauris, posuere eget lobortis vel, vehicula congue dui. Phasellus pellentesque et lacus quis suscipit.
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <section class="guide-section">
+
+                            <h2 class="section-title">
+                              Att knyta en windsor knut
+                            </h2>
+
+                            <div class="divider fade">
+                                <div class="upper-divider"></div>
+                                <div class="lower-divider"></div>
+                            </div>
+
+                            <ul class="guide-list">
+                              <!-- STEP 1 -->
+                              <li class="current">
+                                  <img src="http://www.placehold.it/600x300" alt="steg 1">
+
+                                  <span class="title">Steg 1 - Anpassa längd</span>
+
+                                  <p class="description">
+                                    Stå till en början alltid framför spegeln och knyt slipsen.
+                                    Låt den breda delen vara dubbelt så lång som den smala och dra åt knuten.
+
+                                  </p>
+
+                                  <p class="notes">
+                                    Ett vanligt misstag är att man inte drar åt knuten så slipsen blir för kort.
+                                  </p>
+
+                              </li>
+                              <!-- STEP 2 -->
+                              <li>
+                                  <img src="http://www.placehold.it/600x300" alt="steg 1">
+
+                                  <span class="title">Steg 2 - Sväng runt </span>
+
+                                  <p class="description">
+                                      Lorem Ipsum
+                                  </p>
+
+                                  <p class="notes">
+                                    Ett vanligt misstag är att man inte drar åt knuten så slipsen blir för kort.
+                                  </p>
+
+                              </li>
+                              <!-- STEP 3 -->
+                              <li>
+                                  <img src="http://www.placehold.it/600x300" alt="steg 3">
+
+                                  <span class="title">Steg 3 - Knyyyyt</span>
+
+                                  <p class="description">
+                                      Lorem Ipsum
+                                  </p>
+
+                                  <p class="notes">
+                                    Ett vanligt misstag är att man inte drar åt knuten så slipsen blir för kort.
+                                  </p>
+
+                              </li>
+                              <!-- STEP 4-->
+                              <li>
+                                  <img src="http://www.placehold.it/600x300" alt="steg 4">
+
+                                  <span class="title">Steg 4 - Gå iväg !</span>
+
+                                  <p class="description">
+                                      Du ser nu ut som en gud
+                                  </p>
+
+                                  <p class="notes">
+                                    Ett vanligt misstag är att man inte drar åt knuten så slipsen blir för kort.
+                                  </p>
+
+                              </li>
+                            </ul><!-- /.guide-list -->
+
+                            <a href="#" class="button radius guide-button prev-step">Föregående</a>
+                            <a href="#" class="button radius guide-button next-step">Nästa</a>
+
+
+                            <!-- OPTIMERA och baka in i pluginet -->
+                            <script>
+                              $(document).ready(function(){
+
+                                      if($('.guide-list li.current:first-child').length) {
+                                          $('.prev-step').hide();
+                                      }
+
+                                      $('.next-step').on('click', function(e) {
+                                            e.preventDefault();
+
+                                            var currentElem = $('.guide-list li.current');
+
+                                            currentElem.next().addClass("current");
+                                            currentElem.removeClass("current");
+                                            removeNext();
+                                            removePrev();
+                                      });
+
+                                      $('.prev-step').on('click', function(e) {
+                                            e.preventDefault();
+
+                                            var currentElem = $('.guide-list li.current');
+
+                                            currentElem.prev().addClass("current");
+                                            currentElem.removeClass("current");
+                                            removePrev();
+                                            removeNext();
+
+                                      });
+
+                                      function removeNext() {
+                                        if($('.guide-list li.current:last-child').length) {
+                                            $('.next-step').hide();
+                                          } else {
+                                            $('.next-step').show();
+                                          }
+
+                                      }
+                                      function removePrev() {
+                                        if($('.guide-list li.current:first-child').length) {
+                                            $('.prev-step').hide();
+                                          } else {
+                                            $('.prev-step').show();
+                                          }
+                                      }
+
+                              });
+                            </script><!-- / script -->
+
+                        </section>
+
+                        <!-- news list -->
+                        <section class="news-section">
+                        <ul class="news-list-large row">
+                            <li class="news-item large-12 columns">
+                                <div class="row">
+                                    <div class="large-5 medium-4 small-12 columns news-image">
+                                        <img src="http://www.placehold.it/300x300" alt="alt-text">
+                                    </div>
+                                    <div class="large-7 medium-8 small-12 columns news-content">
+                                        <h2 class="news-title">Du kan förtidsrösta innan valdagen</h2>
+                                        <span class="news-date">28 aug 2014 15:58</span>
+                                        <p>Den 27 augusti-13 september kan du förtidsrösta på flera platser i Helsingborg. För att rösta måste du le- gitimera dig, ta med giltig id-handling och röstkort till vallokalen.</p>
+                                        <a href="#" class="read-more">Läs mer</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        </section>
+
+                        <section class="news-section">
+                        <h2 class="section-title">Fler nyheter</h2>
+
+                        <div class="divider fade">
+                            <div class="upper-divider"></div>
+                            <div class="lower-divider"></div>
+                        </div>
+
+                        <ul class="news-list-small row">
+                            <li class="news-item large-12 columns">
+                                <div class="row">
+                                    <div class="large-9 medium-9 small-9 columns news-content">
+                                        <h2 class="news-title">
+                                            <a href="#">Två gångbroar i Vallåkra avstängda under renovering</a>
+                                        </h2>
+                                    </div><!-- /.large-12 -->
+                                    <div class="large-3 medium-3 small-3 columns">
+                                        <span class="news-date">5 sep 2014</span>
+                                    </div>
+                                </div><!-- /.row -->
+                            </li>
+                            <li class="news-item large-12 columns">
+                                <div class="row">
+                                    <div class="large-9 medium-9 small-9 columns news-content">
+                                        <h2 class="news-title">
+                                            <a href="#">Enklare att sortera skräp på stan</a>
+                                        </h2>
+                                    </div><!-- /.large-12 -->
+                                    <div class="large-3 medium-3 small-3 columns">
+                                        <span class="news-date">5 sep 2014</span>
+                                    </div>
+                                </div><!-- /.row -->
+                            </li>
+                            <li class="news-item large-12 columns">
+                                <div class="row">
+                                    <div class="large-9 medium-9 small-9 columns news-content">
+                                        <h2 class="news-title">
+                                            <a href="#">Två gångbroar i Vallåkra avstängda under renovering</a>
+                                        </h2>
+                                    </div><!-- /.large-12 -->
+                                    <div class="large-3 medium-3 small-3 columns">
+                                        <span class="news-date">5 sep 2014</span>
+                                    </div>
+                                </div><!-- /.row -->
+                            </li>
+
+                        </ul>
+                        </section>
+
+                        <!-- END LIST + BLOCK puffs :-) -->
+                    </div><!-- /.columns -->
+                </div><!-- /.main-content -->
+
+                    <div class="lower-content row">
+                        <div class="sidebar large-4 columns">
+                            <div class="row">
+
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar -->
+
+                        <section class="large-8 columns">
+                            <ul class="block-list news-block-list large-block-grid-3 medium-block-grid-3 small-block-grid-2">
+                                    <li>
+                                        <img src="http://www.placehold.it/330x170" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x370" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                </ul>
+
+                        </section>
+
+                    </div><!-- /.lower-content -->
+                </div>  <!-- /.main-area -->
+
+                <div class="sidebar sidebar-right large-3 columns">
+                    <div class="row">
+                        <div class="calendar-event-widget widget large-12 medium-6 columns">
+                            <div class="widget-content">
+
+                                <h2 class="widget-title">Evenemang i Helsingborg</h2>
+
+                                <div class="divider">
+                                    <div class="upper-divider"></div>
+                                    <div class="lower-divider"></div>
+                                </div>
+
+                                <ul class="calendar-list">
+                                    <li>
+                                        <span class="date">idag 13:00</span>
+                                        <a href="#">Tårtkalas i tågaparken</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">idag 15:00</span>
+                                        <a href="#">Bakom kulisserna på stadsarkivet</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-03</span>
+                                        <a href="#">Samhällsåret - en antology med filmer inför valet</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-03</span>
+                                        <a href="#">Från ärans fält till slakterifabriken</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-04</span>
+                                        <a href="#">Nära leran - Sommarutställning på Keramiskt center</a>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="read-more">Fler evenemang</a>
+
+                            </div><!-- /.widget-content -->
+
+                        </div><!-- /.widget -->
+
+
+                      <div class="quick-links-widget widget large-12 medium-6 columns">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Hitta snabbt</h2>
+
+                                <div class="divider">
+                                    <div class="upper-divider"></div>
+                                    <div class="lower-divider"></div>
+                                </div>
+
+                                <ul class="quick-links-list">
+                                    <li>
+                                        <a href="#">Budgetrådgivning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Gymnasieskolor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kartor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Konsumentrådgivning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lediga jobb</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ombud för funktionsnedsatta</a>
+                                    </li>
+                                </ul>
+
+                            </div><!-- /.widget-content -->
+                    </div><!-- /.widget -->
+
+                        <div class="push-links-widget widget large-12 columns">
+                                <ul class="push-links-list">
+                                    <li class="item-1"><a href="#">Självservice</a></li>
+                                    <li class="item-2"><a href="#">Felanmälan</a></li>
+                                    <li class="item-3"><a href="#">Tyck till</a></li>
+                                    <li class="item-4"><a href="#">Turism</a></li>
+                                    <li class="item-5"><a href="#">Företag</a></li>
+                                    <li class="item-6"><a href="#">Inspiration</a></li>
+                                </ul>
+                        </div><!-- /.widget -->
+                </div><!-- /.rows -->
+            </div><!-- /.sidebar -->
+
+            </div><!-- /.article-page-layout -->
+            </div><!-- /.main-site-container -->
+
+        <footer class="footer">
+            <div class="row">
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Kontakta Helsingborgsstad</h2>
+
+                        <p>
+    Till Helsingborg kontaltcenter kan du v&auml;nda dig med alla dina &auml;renden och fr&aring;gor som har med v&aring;r kommun att g&ouml;ra. V&aring;ra kommunv&auml;gledare finns p&aring; plats f&ouml;r att hj&auml;lpa dig, och om det skulle beh&ouml;vas s&aring; v&auml;gleder vi dig vidare till r&auml;tt person eller verksamhet inom Helsingborgs stad.
+                        </p>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+
+                        <p>
+                            Telefonnummer
+                            042-10 50 00
+                            &ouml;ppettider
+                            M&aring;ndag–torsdag 07:00–19:00. Fredag 07:00–17:00.
+                            L&ouml;rdag 10:00–15:00.
+                            Bes&ouml;ksadress
+                            Stortorget 17
+                            <a href="#" class="push-link">Visa pa karta</a>
+                            Postadress
+                            xxxxxxxxxxxxxxx
+                        </p>
+                    </div><!-- /.footer-content -->
+                </div>
+
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Om webbplatsen</h2>
+                        <ul>
+                            <li><a href="#">Om cookies</a></li>
+                            <li><a href="#">Om tillgänglighet</a></li>
+                            <li><a href="#">Anpassa</a></li>
+                            <li><a href="#">Sajtkarta</a></li>
+                        </ul>
+
+                        <a href="#" class="push-link">Mer om webbplatsen</a>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Helsingborgs stad i sociala medier</h2>
+
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="facebook"/>
+                        </a>
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="twitter"/>
+                        </a>
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="instagram"/>
+                        </a>
+                    </div><!-- /.footer-content -->
+                </div>
+            </div>
+
+        </footer>
+        </div><!-- /.inner-wrap -->
+      </div><!-- /.off-canvas-wrap -->
+        <script src="../js/app.js"></script>
+        <script src="../js/dev/hbg.dev.js"></script>
+    </body>
+</html>

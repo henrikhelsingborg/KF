@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Helsingborg stad - Sök sida med listning</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../css/app.css">
+       <!-- <link rel="stylesheet" href="../css/normalize.css">-->
+
+        <script src="../js/modernizr/modernizr.min.js"></script>
+        <script src="../js/jquery/dist/jquery.min.js"></script>
+        <!-- LET's PHPify this -->
+        <style>
+           .divider.fade .upper-divider,
+           .divider.fade .lower-divider {
+                background: rgb(237,139,0); /* Old browsers */ /* HEX värde här */
+                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlZDhiMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+                background: -moz-linear-gradient(left,  rgba(237,139,0,1) 60%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(60%,rgba(237,139,0,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* IE10+ */
+                background: linear-gradient(to right,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed8b00', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+                }
+                .divider .upper-divider,
+                .divider .lower-divider {
+                    background-color: rgba(237,139,0, 1);
+                }
+                .button {
+                  background-color: rgba(237,139,0, 1) !important;
+                  border: 1px solid rgba(237,139,0, 0.5) !important;
+                  color: #FFF !important;
+                }
+                .input-field {
+                  border: 2px solid rgba(237,139,0, 0.5) !important;
+                }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+
+
+        <aside class="left-off-canvas-menu">
+            <ul class="mobile-nav-list" role="navigation">
+                <li><a href="#">Arbete</a></li>
+                <li><a href="#">Bygga, Bo och miljö</a></li>
+                <li><a href="#">Förskola och utbildning</a></li>
+                <li><a href="#">Kommun och politik</a></li>
+                <li><a href="#">Omsorg och stöd</a></li>
+                <li class="current-node">
+                    <a href="#">Trafik och stadsplanering</a>
+
+                    <ul>
+                        <li><a href="#">Biltrafik</a></li>
+                        <li><a href="#">Buss, båt och tåg</a></li>
+                        <li><a href="#">Cykling</a></li>
+                        <li><a href="#">Gator och trottoarer</a></li>
+                        <li><a href="#">Parkering</a></li>
+                        <li>
+                            <a href="#">Planering och utveckling</a>
+                            <ul>
+                                <li><a href="#">Detaljplanering</a></li>
+                                <li class="current">
+                                    <a href="#">Översiktsplanering</a>
+                                    <ul>
+                                        <li><a href="#">Gällande översiksplaner</a></li>
+                                        <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#">Renhållning och snöröjning</a></li>
+                                <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Parkering</a></li>
+                        <li><a href="#">Test nod</a></li>
+                        <li><a href="#">Test nod</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">Uppleva och göra</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+            </ul>
+        </aside>
+
+        <a class="exit-off-canvas"></a>
+        <nav class="mobile-nav" role="navigation">
+            <div class="mobile-navigation clearfix" role="navigation">
+                <a href="#" class="show-mobile-nav left-off-canvas-toggle">Meny</a>
+                <a href="#" class="show-mobile-search">Sök</a>
+            </div>
+            <div class="mobile-search">
+                        <div class="mobile-search-input-container">
+                            <input type="text" class="mobile-search-input" placeholder="Din S&ouml;kning"/>
+                            <input type="submit" class="mobile-search-btn" value="s&ouml;k" />
+                        </div>
+                    </div>
+        </nav><!-- mobile top nav -->
+
+        <div class="main-site-container">
+        <div class="site-bg"></div>
+      <div class="site-header row">
+                <div class="site-logo large-4 medium-4 columns">
+                    <a href="#" class="logo-link">
+                        <img src="../assets/img/images/hbg-logo.svg" alt="helsingborg stad" class="logo" />
+                    </a>
+                </div><!-- /.site-logo -->
+                <div class="support-nav large-8 medium-8 columns">
+
+                    <a href="#" class="show-support-nav"> <span class="arrow-icon"></span>Hjälpmeny </a>
+
+                    <ul class="support-nav-list inline-list">
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Larm</a></li>
+                        <li><a href="#">Teckenspråk</a></li>
+                        <li><a href="#">Lättläst</a></li>
+                        <li><a href="#">RSS</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Translate</a></li>
+
+                    </ul>
+                </div><!-- /.support-nav -->
+            </div><!-- /.site-header -->
+
+            <div class="article-page-layout no-page-image row">
+                <!-- main-page-layout -->
+                    <div class="main-area large-9 columns">
+
+
+                    <div class="main-content row">
+
+                        <!-- SIDEBAR LEFT -->
+                        <div class="sidebar sidebar-left large-4 medium-4 columns">
+                            <div class="search-container row">
+                                <div class="search-inputs large-12 columns">
+                                    <input type="text" placeholder="Vad letar du efter?" name="search" class="input-field"/>
+                                    <input type="submit" value="Sök" class="button search">
+                                </div>
+                            </div><!-- /.search-container -->
+
+                            <div class="row">
+
+                                <!-- large-up menu-->
+                                <nav class="main-nav large-12 columns show-for-medium-up" role="navigation">
+                                    <ul class="main-nav-list">
+                                        <li><a href="#">Arbete</a></li>
+                                        <li><a href="#">Bygga, Bo och miljö</a></li>
+                                        <li><a href="#">Förskola och utbildning</a></li>
+                                        <li><a href="#">Kommun och politik</a></li>
+                                        <li><a href="#">Omsorg och stöd</a></li>
+                                        <li class="current-node">
+                                            <a href="#">Trafik och stadsplanering</a>
+
+                                            <ul>
+                                                <li><a href="#">Biltrafik</a></li>
+                                                <li><a href="#">Buss, båt och tåg</a></li>
+                                                <li><a href="#">Cykling</a></li>
+                                                <li><a href="#">Gator och trottoarer</a></li>
+                                                <li><a href="#">Parkering</a></li>
+                                                <li>
+                                                    <a href="#">Planering och utveckling</a>
+
+                                                    <ul>
+                                                        <li><a href="#">Detaljplanering</a></li>
+                                                        <li class="current">
+                                                            <a href="#">Översiktsplanering</a>
+                                                            <ul>
+                                                                <li><a href="#">Gällande översiksplaner</a></li>
+                                                                <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Renhållning och snöröjning</a></li>
+                                                        <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Parkering</a></li>
+
+                                            </ul>
+
+                                        </li>
+                                        <li><a href="#">Uppleva och göra</a></li>
+                                    </ul>
+
+                                </nav><!-- /.navigation -->
+                                <!-- END large up menu-->
+
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar-left -->
+
+                        <div class="large-8 medium-8 columns article-column">
+
+                            <!-- Slider OR empty -->
+                            <div class="row no-image"><!-- OBS! addera no-image om denna container INTE innehåller en orbit-slider -->
+
+                                    <!-- If NO ORBIT  -->
+
+                            </div><!-- /.row -->
+
+                            <article class="article">
+
+                              <ul class="accessability-menu">
+                                <li>
+                                  <a href="#" class="icon speaker" title="lyssna på innehållet">Lyssna på</a>
+                                </li>
+                              </ul>
+
+                            <h1 class="article-title">Sök alarm</h1>
+
+                            <div class="ingress">
+                                Alarm sida och detta är ingress
+                            </div><!-- /.ingress -->
+                            <div class="article-body">
+
+                                Alarmsida detta är mainbody
+
+                                <ul class="socialmedia-list">
+                                    <li class="fbook"><a href="#">Facebook</a></li>
+                                    <li class="twitter"><a href="#">Twitter</a></li>
+                                </ul>
+
+                            </div><!-- /.article-body -->
+
+                        </article>
+
+                        <div class="form-container">
+
+                        <!-- SÖK ALARM -->
+                        <!-- OBS! gammal KO kod från evenemangssök. -->
+
+                        <form class="list-form">
+                          <!-- ko foreach: filter.filters -->
+                          <!--<label data-bind="text: Name">:</label>-->
+                          <!-- ko if: (Type == 'select') --><!-- /ko -->
+                          <!-- ko if: (Type == 'text') -->
+                          <div class="input-column">
+                            <label for="ID på det specifka fältet">Input rubrik</label>
+                            <input type="text" class="input-text" data-bind="value: Value, valueUpdate: 'afterkeydown'">
+                          </div>
+                          <!-- /ko -->
+                          <!-- ko if: (Type == 'calendar') --><!-- /ko -->
+
+                          <!--<label data-bind="text: Name">:</label>-->
+                          <!-- ko if: (Type == 'select') --><!-- /ko -->
+                          <!-- ko if: (Type == 'text') -->
+                          <div class="input-column">
+                            <label for="ID på det specifka fältet">Input rubrik</label>
+                            <input type="text" class="input-text" data-bind="value: Value, valueUpdate: 'afterkeydown'">
+                          </div>
+                          <!-- /ko -->
+                          <!-- ko if: (Type == 'calendar') --><!-- /ko -->
+
+                          <!--<label data-bind="text: Name">:</label>-->
+                          <!-- ko if: (Type == 'select') --><!-- /ko -->
+                          <!-- ko if: (Type == 'text') --><!-- /ko -->
+                          <!-- ko if: (Type == 'calendar') -->
+                          <div class="input-column-container">
+                            <div class="input-column input-column-half">
+                              <label for="ID på det specifka fältet">Input rubrik</label>
+                              <input type="text" class="input-calendar" data-bind="value: Value, valueUpdate: 'afterkeydown', attr: {id: CalendarID}" id="datetimepickerstart">
+                            </div>
+                          </div>
+                          <!-- /ko -->
+
+                          <!--<label data-bind="text: Name">:</label>-->
+                          <!-- ko if: (Type == 'select') --><!-- /ko -->
+                          <!-- ko if: (Type == 'text') --><!-- /ko -->
+                          <!-- ko if: (Type == 'calendar') -->
+                          <div class="input-column-container">
+                            <div class="input-column input-column-half">
+                              <label for="ID på det specifka fältet">Input rubrik</label>
+                              <input type="text" class="input-calendar" data-bind="value: Value, valueUpdate: 'afterkeydown', attr: {id: CalendarID}" id="datetimepickerend">
+                            </div>
+                          </div>
+                          <!-- /ko -->
+
+                          <!--<label data-bind="text: Name">:</label>-->
+                          <!-- ko if: (Type == 'select') -->
+                          <div class="input-column">
+                            <div style="display: none;">
+                              <label for="municipality_multiselect">Selectbox rubrik</label>
+                              <select id="municipality_multiselect" rel="4sizldikm" style="display: none;">
+                                <option value="Bjuv">Bjuv</option>
+                                <option value="Helsingborg" data-selected="">Helsingborg</option>
+                                <option value="Höganäs">Höganäs</option>
+                                <option value="Klippan">Klippan</option>
+                                <option value="Landskrona">Landskrona</option>
+                                <option value="Åstorp">Åstorp</option>
+                                <option value="Ängelholm">Ängelholm</option>
+                                <option value="Örkelljunga">Örkelljunga</option>
+                              </select>
+                              <div id="5qel6imud" class="zselect"><span class="zmshead">&nbsp;</span>
+                                <ul style="width:576px!important;">
+                                  <li class="zmsfilter"><input type="text" placeholder="Filtrera..."></li>
+                                  <li class="selectall">Markera alla</li>
+                                  <li class="deselectall">Avmarkera alla</li>
+                                  <li><input value="Bjuv" type="checkbox"><span style="width:100%;display:table-cell;">Bjuv</span></li>
+                                  <li><input value="Helsingborg" type="checkbox" checked="checked"><span style="width:100%;display:table-cell;">Helsingborg</span></li>
+                                  <li><input value="Höganäs" type="checkbox"><span style="width:100%;display:table-cell;">Höganäs</span></li><li><input value="Klippan" type="checkbox"><span style="width:100%;display:table-cell;">Klippan</span></li><li><input value="Landskrona" type="checkbox"><span style="width:100%;display:table-cell;">Landskrona</span></li><li><input value="Åstorp" type="checkbox"><span style="width:100%;display:table-cell;">Åstorp</span></li><li><input value="Ängelholm" type="checkbox"><span style="width:100%;display:table-cell;">Ängelholm</span></li><li><input value="Örkelljunga" type="checkbox"><span style="width:100%;display:table-cell;">Örkelljunga</span></li><li class="filterResult"></li>
+                                </ul>
+                              </div>
+                              <div id="4sizldikm" class="zselect"><span class="zmshead">&nbsp;</span>
+                                <ul style="width:576px!important;"><li class="zmsfilter"><input type="text" placeholder="Filter..."></li>
+                                  <li class="selectall">Markera alla</li><li class="deselectall">Avmarkera alla</li><li><input value="Bjuv" type="checkbox"><span style="width:100%;display:table-cell;">Bjuv</span></li>
+                                  <li><input value="Helsingborg" type="checkbox" checked="checked"><span style="width:100%;display:table-cell;">Helsingborg</span></li><li><input value="Höganäs" type="checkbox"><span style="width:100%;display:table-cell;">Höganäs</span></li><li><input value="Klippan" type="checkbox"><span style="width:100%;display:table-cell;">Klippan</span></li><li><input value="Landskrona" type="checkbox"><span style="width:100%;display:table-cell;">Landskrona</span></li><li><input value="Åstorp" type="checkbox"><span style="width:100%;display:table-cell;">Åstorp</span></li><li><input value="Ängelholm" type="checkbox"><span style="width:100%;display:table-cell;">Ängelholm</span></li><li><input value="Örkelljunga" type="checkbox"><span style="width:100%;display:table-cell;">Örkelljunga</span></li><li class="filterResult"></li></ul>
+                                  </div>
+                              </div>
+
+                            </div>
+                            <!-- /ko -->
+                            <!-- ko if: (Type == 'text') --><!-- /ko -->
+                            <!-- ko if: (Type == 'calendar') --><!-- /ko -->
+                            <!-- /ko -->
+                            <input type="text" id="selectedTypes" style="display: none;" data-bind="textInput: selectedEventTypes">
+                        </form>
+                        <!-- END LIST FORM -->
+                        </div><!-- /.form-container -->
+
+                        <!-- LIST ALARMS -->
+                        <div class="list-container">
+                          <h2 class="section-title">Alarm s&ouml;kning</h2>
+                          <div class="divider fade">
+                            <div class="upper-divider"></div>
+                            <div class="lower-divider"></div>
+                          </div>
+
+                          <ul class="block-list page-block-list page-list large-block-grid-2 medium-block-grid-2 small-block-grid-2">
+                              <li>
+                                  <ul class="mini-item-list">
+                                      <li>
+                                          <span class="item-label">Datum och tid</span><span class="item-value">2014-12-11 08:15</span>
+                                      </li>
+                                      <li>
+                                        <span class="item-label">H&auml;ndelse</span><a class="item-value" title="link-title">Trafikolycka - singel Personbil Övrigt</a>
+                                      </li>
+                                      <li>
+                                        <span class="item-label">Adress</span><span class="item-value" title="link-title">Djurhagsvägen</span>
+                                      </li>
+                                      <li>
+                                        <span class="item-label">Station</span><span class="item-value" title="link-title">Bårslöv</span>
+                                      </li>
+                                      <li>
+                                        <span class="item-label">Kommun</span><span class="item-value" title="link-title">M85T</span>
+                                      </li>
+                                  </ul>
+                              </li>
+
+                              <li>
+                                  <ul class="mini-item-list">
+                                    <li>
+                                      <span class="item-label">Datum och tid</span><span class="item-value">2014-12-11 08:15</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">H&auml;ndelse</span><a class="item-value" title="link-title">Trafikolycka - singel Personbil Övrigt</a>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Adress</span><span class="item-value" title="link-title">Djurhagsvägen</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Station</span><span class="item-value" title="link-title">Bårslöv</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Kommun</span><span class="item-value" title="link-title">M85T</span>
+                                    </li>
+                                  </ul>
+                              </li>
+
+                              <li>
+                                  <ul class="mini-item-list">
+                                    <li>
+                                      <span class="item-label">Datum och tid</span><span class="item-value">2014-12-11 08:15</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">H&auml;ndelse</span><a class="item-value" title="link-title">Trafikolycka - singel Personbil Övrigt</a>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Adress</span><span class="item-value" title="link-title">Djurhagsvägen</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Station</span><span class="item-value" title="link-title">Bårslöv</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Kommun</span><span class="item-value" title="link-title">M85T</span>
+                                    </li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <ul class="mini-item-list">
+                                    <li>
+                                      <span class="item-label">Datum och tid</span><span class="item-value">2014-12-11 08:15</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">H&auml;ndelse</span><a class="item-value" title="link-title">Trafikolycka - singel Personbil Övrigt</a>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Adress</span><span class="item-value" title="link-title">Djurhagsvägen</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Station</span><span class="item-value" title="link-title">Bårslöv</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Kommun</span><span class="item-value" title="link-title">M85T</span>
+                                    </li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <ul class="mini-item-list">
+                                    <li>
+                                      <span class="item-label">Datum och tid</span><span class="item-value">2014-12-11 08:15</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">H&auml;ndelse</span><a class="item-value" title="link-title">Trafikolycka - singel Personbil Övrigt</a>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Adress</span><span class="item-value" title="link-title">Djurhagsvägen</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Station</span><span class="item-value" title="link-title">Bårslöv</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Kommun</span><span class="item-value" title="link-title">M85T</span>
+                                    </li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <ul class="mini-item-list">
+                                    <li>
+                                      <span class="item-label">Datum och tid</span><span class="item-value">2014-12-11 08:15</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">H&auml;ndelse</span><a class="item-value" title="link-title">Trafikolycka - singel Personbil Övrigt</a>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Adress</span><span class="item-value" title="link-title">Djurhagsvägen</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Station</span><span class="item-value" title="link-title">Bårslöv</span>
+                                    </li>
+                                    <li>
+                                      <span class="item-label">Kommun</span><span class="item-value" title="link-title">M85T</span>
+                                    </li>
+                                  </ul>
+                              </li>
+                          </ul>
+
+                        </div><!-- /.list-container -->
+
+                          <!-- END LIST + BLOCK puffs :-) -->
+                    </div><!-- /.columns -->
+                </div><!-- /.main-content -->
+
+                    <div class="lower-content row">
+                        <div class="sidebar large-4 columns">
+                            <div class="row">
+
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar -->
+
+
+                    </div><!-- /.lower-content -->
+                </div>  <!-- /.main-area -->
+
+                <div class="sidebar sidebar-right large-3 columns">
+                    <div class="row">
+                        <div class="calendar-event-widget widget large-12 medium-6 columns">
+                            <div class="widget-content">
+
+                                <h2 class="widget-title">Evenemang i Helsingborg</h2>
+
+                                <div class="divider">
+                                    <div class="upper-divider"></div>
+                                    <div class="lower-divider"></div>
+                                </div>
+
+                                <ul class="calendar-list">
+                                    <li>
+                                        <span class="date">idag 13:00</span>
+                                        <a href="#">Tårtkalas i tågaparken</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">idag 15:00</span>
+                                        <a href="#">Bakom kulisserna på stadsarkivet</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-03</span>
+                                        <a href="#">Samhällsåret - en antology med filmer inför valet</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-03</span>
+                                        <a href="#">Från ärans fält till slakterifabriken</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-04</span>
+                                        <a href="#">Nära leran - Sommarutställning på Keramiskt center</a>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="read-more">Fler evenemang</a>
+
+                            </div><!-- /.widget-content -->
+
+                        </div><!-- /.widget -->
+
+
+                      <div class="quick-links-widget widget large-12 medium-6 columns">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Hitta snabbt</h2>
+
+                                <div class="divider">
+                                    <div class="upper-divider"></div>
+                                    <div class="lower-divider"></div>
+                                </div>
+
+                                <ul class="quick-links-list">
+                                    <li>
+                                        <a href="#">Budgetrådgivning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Gymnasieskolor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kartor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Konsumentrådgivning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lediga jobb</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ombud för funktionsnedsatta</a>
+                                    </li>
+                                </ul>
+
+                            </div><!-- /.widget-content -->
+                    </div><!-- /.widget -->
+
+                        <div class="push-links-widget widget large-12 columns">
+                                <ul class="push-links-list">
+                                    <li class="item-1"><a href="#">Självservice</a></li>
+                                    <li class="item-2"><a href="#">Felanmälan</a></li>
+                                    <li class="item-3"><a href="#">Tyck till</a></li>
+                                    <li class="item-4"><a href="#">Turism</a></li>
+                                    <li class="item-5"><a href="#">Företag</a></li>
+                                    <li class="item-6"><a href="#">Inspiration</a></li>
+                                </ul>
+                        </div><!-- /.widget -->
+                </div><!-- /.rows -->
+            </div><!-- /.sidebar -->
+
+            </div><!-- /.article-page-layout -->
+        </div><!-- /.main-site-container -->
+
+
+        <footer class="footer">
+            <div class="row">
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Kontakta Helsingborgsstad</h2>
+
+                        <p>
+    Till Helsingborg kontaltcenter kan du v&auml;nda dig med alla dina &auml;renden och fr&aring;gor som har med v&aring;r kommun att g&ouml;ra. V&aring;ra kommunv&auml;gledare finns p&aring; plats f&ouml;r att hj&auml;lpa dig, och om det skulle beh&ouml;vas s&aring; v&auml;gleder vi dig vidare till r&auml;tt person eller verksamhet inom Helsingborgs stad.
+                        </p>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+
+                        <p>
+                            Telefonnummer
+                            042-10 50 00
+                            &ouml;ppettider
+                            M&aring;ndag–torsdag 07:00–19:00. Fredag 07:00–17:00.
+                            L&ouml;rdag 10:00–15:00.
+                            Bes&ouml;ksadress
+                            Stortorget 17
+                            <a href="#" class="push-link">Visa pa karta</a>
+                            Postadress
+                            xxxxxxxxxxxxxxx
+                        </p>
+                    </div><!-- /.footer-content -->
+                </div>
+
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Om webbplatsen</h2>
+                        <ul>
+                            <li><a href="#">Om cookies</a></li>
+                            <li><a href="#">Om tillgänglighet</a></li>
+                            <li><a href="#">Anpassa</a></li>
+                            <li><a href="#">Sajtkarta</a></li>
+                        </ul>
+
+                        <a href="#" class="push-link">Mer om webbplatsen</a>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Helsingborgs stad i sociala medier</h2>
+
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="facebook"/>
+                        </a>
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="twitter"/>
+                        </a>
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="instagram"/>
+                        </a>
+                    </div><!-- /.footer-content -->
+                </div>
+            </div>
+
+        </footer>
+        </div><!-- /.inner-wrap -->
+        </div><!-- /.main-site-container -->
+
+        <div class="reveal-modal-bg" style="display: block;"></div>
+        <div id="eventModal" class="reveal-modal modal open" data-reveal="" style="display: block; opacity: 1; visibility: visible; top: 323px;">
+          <h2 class="section-title">Alarm</h2>
+
+          <div class="divider fade">
+            <div class="upper-divider"></div>
+            <div class="lower-divider"></div>
+          </div>
+
+          <h1 class="main-title">Brand i byggnad Flerfamiljshus Lägenhet</h1>
+
+          <div class="row">
+              <div class="small-12">
+                  <ul class="modal-item-list">
+                    <li>
+                        <span class="item-label modalDateHeader">Tidpunkt:</span>
+                        <span class="item-value modalDate">2014-12-01 18:52:53</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalEventHeader">Händelse:</span>
+                        <span class="item-value modalEvent">Brand i byggnad Flerfamiljshus Lägenhet</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalStationHeader">Station:</span>
+                        <span class="item-value modalStation">M220Contal;</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalIDHeader">Ärendeid:</span>
+                        <span class="item-value modalID">141201C0025</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalStateHeader">Larmnivå:</span>
+                        <span class="item-value modalState">Larm, Nivå 1</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalAddressHeader">Adress:</span>
+                        <span class="item-value modalAddress">Kopparmöllegatan 26, 2</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalLocationHeader">Plats:</span>
+                        <span class="item-value modalLocation">Helsingborg</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalAreaHeader">Insatsområde:</span>
+                        <span class="item-value modalArea">M21M</span>
+                    </li>
+                    <li>
+                        <span class="item-label modalMunicipalityHeader">Kommuner:</span>
+                        <span class="item-value modalMunicipality">M21M</span>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+
+          <a class="close-reveal-modal">×</a>
+
+          <!--
+          <b><p class="modalDateHeader">Tidpunkt:</p></b>
+          <p class="modalDate">2014-12-01 18:52:53</p>
+          <b><p class="modalEventHeader">Händelse:</p></b>
+          <p class="modalEvent">Brand i byggnad Flerfamiljshus Lägenhet</p>
+          <b><p class="modalStationHeader">Station:</p></b>
+          <p class="modalStation">M220Contal;</p>
+          <b><p class="modalIDHeader">Ärendeid:</p></b>
+          <p class="modalID">141201C0025</p>
+          <b><p class="modalStateHeader">Larmnivå:</p></b>
+          <p class="modalState">Larm, Nivå 1</p>
+          <b><p class="modalAddressHeader">Adress:</p></b>
+          <p class="modalAddress">Kopparmöllegatan 26, 2</p>
+          <b><p class="modalLocationHeader">Plats:</p></b>
+          <p class="modalLocation">Helsingborg</p>
+          <b><p class="modalAreaHeader">Insatsområde:</p></b>
+          <p class="modalArea">M21M</p>
+          <b><p class="modalMunicipalityHeader">Kommuner:</p></b>
+          <p class="modalMunicipality">M21M</p>
+          -->
+        </div><!-- /.modal -->
+
+        <script src="../js/app.js"></script>
+        <script src="../js/dev/hbg.dev.js"></script>
+    </body>
+</html>

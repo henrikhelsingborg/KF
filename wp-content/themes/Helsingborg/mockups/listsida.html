@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Helsingborg stad - Listsida</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../css/app.css">
+       <!-- <link rel="stylesheet" href="../css/normalize.css">-->
+
+        <script src="../js/modernizr/modernizr.min.js"></script>
+        <script src="../js/jquery/dist/jquery.min.js"></script>
+        <!-- LET's PHPify this -->
+        <style>
+           .divider.fade .upper-divider,
+           .divider.fade .lower-divider {
+                background: rgb(237,139,0); /* Old browsers */ /* HEX värde här */
+                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlZDhiMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+                background: -moz-linear-gradient(left,  rgba(237,139,0,1) 60%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(60%,rgba(237,139,0,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* IE10+ */
+                background: linear-gradient(to right,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed8b00', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+                }
+                .divider .upper-divider,
+                .divider .lower-divider {
+                    background-color: rgba(237,139,0, 1);
+                }
+
+        </style>
+
+    </head>
+    <body>
+       <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+
+
+        <aside class="left-off-canvas-menu">
+            <ul class="mobile-nav-list" role="navigation">
+                <li><a href="#">Arbete</a></li>
+                <li><a href="#">Bygga, Bo och miljö</a></li>
+                <li><a href="#">Förskola och utbildning</a></li>
+                <li><a href="#">Kommun och politik</a></li>
+                <li><a href="#">Omsorg och stöd</a></li>
+                <li class="current-node">
+                    <a href="#">Trafik och stadsplanering</a>
+
+                    <ul>
+                        <li><a href="#">Biltrafik</a></li>
+                        <li><a href="#">Buss, båt och tåg</a></li>
+                        <li><a href="#">Cykling</a></li>
+                        <li><a href="#">Gator och trottoarer</a></li>
+                        <li><a href="#">Parkering</a></li>
+                        <li>
+                            <a href="#">Planering och utveckling</a>
+                            <ul>
+                                <li><a href="#">Detaljplanering</a></li>
+                                <li class="current">
+                                    <a href="#">Översiktsplanering</a>
+                                    <ul>
+                                        <li><a href="#">Gällande översiksplaner</a></li>
+                                        <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#">Renhållning och snöröjning</a></li>
+                                <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Parkering</a></li>
+                        <li><a href="#">Test nod</a></li>
+                        <li><a href="#">Test nod</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">Uppleva och göra</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+            </ul>
+        </aside>
+
+        <a class="exit-off-canvas"></a>
+        <nav class="mobile-nav" role="navigation">
+            <div class="mobile-navigation clearfix" role="navigation">
+                <a href="#" class="show-mobile-nav left-off-canvas-toggle">Meny</a>
+                <a href="#" class="show-mobile-search">Sök</a>
+            </div>
+            <div class="mobile-search">
+                        <div class="mobile-search-input-container">
+                            <input type="text" class="mobile-search-input" placeholder="Din S&ouml;kning"/>
+                            <input type="submit" class="mobile-search-btn" value="s&ouml;k" />
+                        </div>
+                    </div>
+        </nav><!-- mobile top nav -->
+
+        <div class="main-site-container">
+            <div class="site-bg"></div>
+            <div class="site-header row">
+                <div class="site-logo large-4 medium-4 columns">
+                    <a href="#" class="logo-link">
+                        <img src="../assets/img/images/hbg-logo.svg" alt="helsingborg stad" class="logo" />
+                    </a>
+                </div><!-- /.site-logo -->
+                <div class="support-nav large-8 medium-8 columns">
+
+                    <a href="#" class="show-support-nav"> <span class="arrow-icon"></span>Hjälpmeny </a>
+
+                    <ul class="support-nav-list inline-list">
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Larm</a></li>
+                        <li><a href="#">Teckenspråk</a></li>
+                        <li><a href="#">Lättläst</a></li>
+                        <li><a href="#">RSS</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Translate</a></li>
+
+                    </ul>
+                </div><!-- /.support-nav -->
+            </div><!-- /.site-header -->
+
+            <div class="list-page-layout no-page-image row">
+                <!-- main-page-layout -->
+                    <div class="main-area large-12 columns">
+
+
+                    <div class="main-content row">
+                        <!-- SIDEBAR LEFT -->
+                        <div class="sidebar sidebar-left large-3 medium-4 columns">
+                            <div class="search-container row">
+                                <div class="search-inputs large-12 columns">
+                                    <input type="text" placeholder="Vad letar du efter?" name="search"/>
+                                    <input type="submit" value="Sök">
+                                </div>
+                            </div><!-- /.search-container -->
+
+                            <div class="row">
+
+                                <!-- large-up menu-->
+                                <nav class="main-nav large-12 columns show-for-medium-up" role="navigation">
+                                    <ul class="main-nav-list">
+                                        <li><a href="#">Arbete</a></li>
+                                        <li><a href="#">Bygga, Bo och miljö</a></li>
+                                        <li><a href="#">Förskola och utbildning</a></li>
+                                        <li><a href="#">Kommun och politik</a></li>
+                                        <li><a href="#">Omsorg och stöd</a></li>
+                                        <li class="current-node">
+                                            <a href="#">Trafik och stadsplanering</a>
+
+                                            <ul>
+                                                <li><a href="#">Biltrafik</a></li>
+                                                <li><a href="#">Buss, båt och tåg</a></li>
+                                                <li><a href="#">Cykling</a></li>
+                                                <li><a href="#">Gator och trottoarer</a></li>
+                                                <li><a href="#">Parkering</a></li>
+                                                <li>
+                                                    <a href="#">Planering och utveckling</a>
+
+                                                    <ul>
+                                                        <li><a href="#">Detaljplanering</a></li>
+                                                        <li class="current">
+                                                            <a href="#">Översiktsplanering</a>
+                                                            <ul>
+                                                                <li><a href="#">Gällande översiksplaner</a></li>
+                                                                <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Renhållning och snöröjning</a></li>
+                                                        <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Parkering</a></li>
+
+                                            </ul>
+
+                                        </li>
+                                        <li><a href="#">Uppleva och göra</a></li>
+                                    </ul>
+
+                                </nav><!-- /.navigation -->
+                                <!-- END large up menu-->
+
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar-left -->
+
+                        <div class="large-9 medium-8 columns article-column">
+
+                            <!-- Slider OR empty -->
+                            <div class="row no-image"><!-- OBS! addera no-image om denna container INTE innehåller en orbit-slider -->
+
+                                    <!-- If NO ORBIT  -->
+
+                            </div><!-- /.row -->
+
+                            <article class="article">
+
+                              <ul class="accessability-menu">
+                                <li>
+                                  <a href="#" class="icon speaker" title="lyssna på innehållet">Lyssna på</a>
+                                </li>
+                              </ul>
+
+                            <h1 class="article-title">Förskolor i helsingborg</h1>
+
+                            <div class="ingress">
+Här presenteras alla förskolor i Helsingborg. Listan är uppdelad i Kunskapsstaden Helsingborg (de kommunala förskolorna), Fristående förskolor, Familjecentraler/Öppna förskolor och Familjedaghem. Klicka på en skola så får du en kort beskrivning inklusive länk till förskolans webbplats. Du kan sortera de olika rubrikerna i listan genom att klicka på pilarna i anslutning till respektive rubrik. Du kan också använda sökfältet för att söka på exempelvis skolnamn eller område.
+
+                            </div><!-- /.ingress -->
+                            <div class="article-body">
+                                <p>
+                                Alla kommuner ska ha en aktuell översiktsplan som omfattar hela kommunen, vilket anges i plan- och bygglagen. Kommunfullmäktige måste varje mandatperiod besluta om planens aktualitet, det vill säga ta ställning till om översiktsplanen är aktuell eller ej.
+                                </p>
+
+
+
+                <div class="filter-search">
+                    <input type="text" placeholder="Sök i listan..."/>
+                    <input type="submit" value="sök">
+                </div>
+
+<!-- HBG test TABLE -->
+                <table class="table-list">
+                  <thead>
+                    <tr>
+                        <th>Rubrik</th>
+                      <th>Namn</th>
+                      <th>Område</th>
+                      <th>Antal barn / elever</th>
+                      <th>Huvudman</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr class="table-item">
+                      <th rowspan="2" scope="2">Adolfina förskola</td>
+                      <td>Adolfina förskola</td>
+                      <td>Adolfsberg</td>
+                      <td>cirka 100</td>
+                      <td>Kunskapsstaden helsingborg</td>
+                    </tr>
+                    <tr class="table-content">
+                        <td colspan="4">
+                            <h2>Adolfina förskola</h2>
+                            <div class="td-content">
+                                <p>Välkommen till Adolfina förskola. Vi är en mångkulturell förskola som tar vara på barnens olikheter och bakgrunder. Vår kunniga personal arbetar aktivt med barnens språkutveckling och ger dem ständigt nya upplevelser. Hos oss får ditt barn en rolig, lärorik och trygg vistelse.
+
+                                </p>
+                                <a href="#" desc="link-desc" class="read-more">Läs mer</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-item">
+                      <th rowspan="2" scope="2">Björka förskola</td>
+                      <td>Björka förskola</td>
+                      <td>Ödåkra</td>
+                      <td>cirka 35</td>
+                      <td>Kunskapsstaden helsingborg</td>
+                    </tr>
+                    <tr class="table-content">
+                        <td colspan="4">
+                            <h2>Björka förskola</h2>
+                            <div class="td-content">
+                                <p>Välkommen till Adolfina förskola. Vi är en mångkulturell förskola som tar vara på barnens olikheter och bakgrunder. Vår kunniga personal arbetar aktivt med barnens språkutveckling och ger dem ständigt nya upplevelser. Hos oss får ditt barn en rolig, lärorik och trygg vistelse.
+
+                                </p>
+                                <a href="#" desc="link-desc" class="read-more">Läs mer</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-item">
+                      <th rowspan="2" scope="2">Fyrklöverns Montessori - Förskola Gustavslund</td>
+                      <td>Fyrklöverns Montessori - Förskola Gustavslund</td>
+                      <td>Gustavslund</td>
+                      <td>50</td>
+                      <td>Fristående</td>
+                    </tr>
+                    <tr class="table-content">
+                        <td colspan="4">
+                            <h2>Fyrklöverns Montessori - Förskola Gustavslund</h2>
+                            <div class="td-content">
+                                <p>Välkommen till Adolfina förskola. Vi är en mångkulturell förskola som tar vara på barnens olikheter och bakgrunder. Vår kunniga personal arbetar aktivt med barnens språkutveckling och ger dem ständigt nya upplevelser. Hos oss får ditt barn en rolig, lärorik och trygg vistelse.
+                                </p>
+                                <a href="#" desc="link-desc" class="read-more">Läs mer</a>
+
+                            </div>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+                                 </p>
+
+                                <ul class="socialmedia-list">
+                                    <li class="fbook"><a href="#">Facebook</a></li>
+                                    <li class="twitter"><a href="#">Twitter</a></li>
+                                </ul>
+
+                            </div><!-- /.article-body -->
+
+                        </article>
+
+                        <!-- List "puffar" + "blockpuffar" se : http://www.helsingborg.se/Medborgare/Uppleva-och-gora/ + http://www.helsingborg.se/Medborgare/Trafik-och-stadsplanering/ -->
+
+
+                    </div><!-- /.columns -->
+                </div><!-- /.main-content -->
+
+                    <div class="lower-content row">
+                        <div class="sidebar large-3 medium-4 columns">
+                            <div class="row">
+                                <!-- PUSH LINKS -->
+                                <div class="push-links-widget widget large-12 columns">
+                                    <ul class="push-links-list">
+                                        <li class="item-1"><a href="#">Självservice</a></li>
+                                        <li class="item-2"><a href="#">Felanmälan</a></li>
+                                        <li class="item-3"><a href="#">Tyck till</a></li>
+                                        <li class="item-4"><a href="#">Turism</a></li>
+                                        <li class="item-5"><a href="#">Företag</a></li>
+                                        <li class="item-6"><a href="#">Inspiration</a></li>
+
+                                    </ul>
+
+                                </div><!-- /.widget -->
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar -->
+
+                        <section class="large-9 medium-8 columns">
+                            <ul class="block-list news-block-list large-block-grid-3 medium-block-grid-3 small-block-grid-2">
+                                    <li>
+                                        <img src="http://www.placehold.it/330x170" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x370" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                </ul>
+
+                        </section>
+
+                    </div><!-- /.lower-content -->
+                </div>  <!-- /.main-area -->
+
+
+            </div><!-- /.article-page-layout -->
+        </div><!-- /.main-site-container -->
+
+
+        <footer class="footer">
+            <div class="row">
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Kontakta Helsingborgsstad</h2>
+
+                        <p>
+    Till Helsingborg kontaltcenter kan du v&auml;nda dig med alla dina &auml;renden och fr&aring;gor som har med v&aring;r kommun att g&ouml;ra. V&aring;ra kommunv&auml;gledare finns p&aring; plats f&ouml;r att hj&auml;lpa dig, och om det skulle beh&ouml;vas s&aring; v&auml;gleder vi dig vidare till r&auml;tt person eller verksamhet inom Helsingborgs stad.
+                        </p>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+
+                        <p>
+                            Telefonnummer
+                            042-10 50 00
+                            &ouml;ppettider
+                            M&aring;ndag–torsdag 07:00–19:00. Fredag 07:00–17:00.
+                            L&ouml;rdag 10:00–15:00.
+                            Bes&ouml;ksadress
+                            Stortorget 17
+                            <a href="#" class="push-link">Visa pa karta</a>
+                            Postadress
+                            xxxxxxxxxxxxxxx
+                        </p>
+                    </div><!-- /.footer-content -->
+                </div>
+
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Om webbplatsen</h2>
+                        <ul>
+                            <li><a href="#">Om cookies</a></li>
+                            <li><a href="#">Om tillgänglighet</a></li>
+                            <li><a href="#">Anpassa</a></li>
+                            <li><a href="#">Sajtkarta</a></li>
+                        </ul>
+
+                        <a href="#" class="push-link">Mer om webbplatsen</a>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Helsingborgs stad i sociala medier</h2>
+
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="facebook"/>
+                        </a>
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="twitter"/>
+                        </a>
+                        <a href="#">
+                            <img src="http://www.placehold.it/60x60" alt="instagram"/>
+                        </a>
+                    </div><!-- /.footer-content -->
+                </div>
+            </div>
+
+        </footer>
+        </div><!-- /.inner-wrap -->
+        </div><!-- /.main-site-container -->
+        <script src="../js/app.js"></script>
+        <script src="../js/dev/hbg.dev.js"></script>
+        <script src="../js/plugins/jquery.tablesorter.min.js"></script>
+    </body>
+</html>

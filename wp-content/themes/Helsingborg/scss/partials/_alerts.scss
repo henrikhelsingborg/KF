@@ -1,0 +1,95 @@
+/* alert messages - style */
+
+/* ALERT */
+.alert-msg {
+  padding: rem-calc(16);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: $border-radius;
+  a {
+    font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .alert-link {
+    display: block;
+    &:after {
+      content: $text-arrow;
+    }
+  }
+  p {
+    margin-top: rem-calc(18);
+    margin-bottom: rem-calc(18);
+  }
+  &.warning {
+    background-color: $warning-bg-color;
+    color: $warning-text-color;
+    border-color: $warning-border-color;
+    a {
+      color: $warning-text-color;
+    }
+  }
+  &.info {
+    background-color: $info-bg-color;
+    color: $info-text-color;
+    border-color: $info-border-color;
+    a {
+      color: $info-text-color;
+    }
+  }
+}
+
+//alerts in sidebar widget
+.widget .alert-msg {
+  margin-bottom: rem-calc(16);
+}
+
+//alert icon
+.warning .alert-link,
+.widget .warning a {
+  &:before {
+    @include hbg-icons($warning);
+    margin-right: rem-calc(8);
+    padding-top: rem-calc(3);
+    padding-bottom: rem-calc(16);
+    float: left;
+  }
+}
+
+//info icon
+.info .alert-link,
+.widget .info a {
+  &:before {
+    @include hbg-icons($info);
+    margin-right: rem-calc(8);
+    padding-top: rem-calc(3);
+    padding-bottom: rem-calc(16);
+    font-size: rem-calc(20);
+    float: left;
+  }
+}
+
+//alert in main-area
+.main-area .alert-msg {
+  @include box-shadow;
+  .alert-link {
+
+    &:before {
+      display: block;
+      float: left;
+      padding-bottom: 0;
+    }
+  }
+}
+
+//alert on article page
+.article-column .alert {
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+}
+
+.news-list-large .alert-msg,
+.news-list .alert-msg {
+  border: none;
+}

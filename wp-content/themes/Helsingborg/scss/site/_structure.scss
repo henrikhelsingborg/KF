@@ -1,0 +1,766 @@
+/**
+ * Table of Contents for Helsingborg:
+ *
+ * 1.0 - Custom settings
+ * 2.0 - Typography
+ * 3.0 - Header, sidebar and footer
+ * 4.0 - Content
+ *	4.1 - StartPage
+ *	4.2 - Posts
+ *	4.3	- Widgets
+ *	4.4 - Comments
+  *	4.5 - Lists
+  * 4.6 - Forms
+	* 4.7 - Table-List + List search
+	* 4.8 - 404-page
+	* 4.9 - Breadcrumb
+	* 4.10 - Timestamp
+	* 5.1 - Print
+
+ * 5.0 - Plugins
+
+ * ----------------------------------------------------------------------------
+ */
+
+body {
+	background: url(#{$wp-root-url}/#{$wp-theme-img-url}/hbg-bg.png) $white repeat-x;
+}
+
+.site-bg {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	top: rem-calc(200);
+	right: 0;
+	bottom: 0;
+	background-color: $white;
+}
+
+.main-site-container,
+.footer {
+	position: relative;
+	@include site-space;
+	> .row {
+		max-width: rem-calc($max-site-width);
+	}
+}
+
+
+/**
+ * 1.0 Custom settings
+ * ----------------------------------------------------------------------------
+ */
+
+
+// Reset margin and padding on figure element
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+// Add some basic styling for figcaption element
+figcaption {
+	margin-bottom: rem-calc(20);
+	margin-top: rem-calc(10);
+	color: #6f6f6f;
+}
+
+// Add the alignment classes used by the WordPress media library
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+blockquote.alignleft,
+img.alignleft {
+	margin: rem-calc(7) rem-calc(24) rem-calc(7) 0;
+}
+
+.wp-caption.alignleft {
+	margin: rem-calc(7) rem-calc(14) rem-calc(7) 0;
+}
+
+blockquote.alignright,
+img.alignright {
+	margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
+}
+
+
+// Add some whitespace between top bar and content
+.top-bar-container, .tab-bar {
+	margin-bottom: rem-calc(32);
+}
+
+// Fix the issue where the WP adminbar overlaps the mobile menu
+#wpadminbar {
+	position: fixed !important;
+}
+
+/**
+ * 2.0 Typography
+ * ----------------------------------------------------------------------------
+ */
+%sub-title {
+	font-size: rem-calc(16);
+	font-weight: 500;
+}
+
+.article-page-layout h1 {
+	margin-top: 0;
+	margin-bottom: rem-calc(14);
+	padding-right: rem-calc(92);
+}
+
+.page-block-list .list-title {
+	@extend %sub-title;
+	&:after {
+		content: "";
+	}
+}
+
+
+
+/**
+ * 3.0 Header, sidebar and footer
+ * ----------------------------------------------------------------------------
+ */
+
+// A more subtle background color for the active menu item
+.top-bar-section li.active:not(.has-form) a:not(.button)  {
+	background: #272727;
+}
+.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+	background: #202020;
+}
+
+// Add some whitespace above the footer for medium-up screens
+@media #{$medium-up} {
+	footer.row {
+		margin-top: rem-calc(60);
+	}
+}
+
+
+
+
+
+
+/* Generics
+* -----------------------------------------------------------------------------
+**/
+
+/* Link styles */
+.main-content {
+		a {
+			@include global-link-style;
+		}
+	}
+
+
+.main-page-layout .listen-to {
+	margin-top: 0;
+}
+
+
+
+/**
+ * 4.0 Content
+ * ----------------------------------------------------------------------------
+ */
+
+ 	/* No image on article page behaviour */
+ 		 .row.no-image {
+ 			background-color: $white;
+  		@include border-top-radius;
+			@include box-shadow-advanced(0, 3, 1, 255,255,255,1, false, true, 3, 0, 2, 0,0,0,0.4, false);
+			min-height: rem-calc(400);
+			position: absolute;
+			z-index: -2;
+			width: 100%;
+ 		}
+
+
+	.read-more {
+		&:after {
+			content: $nbsp $text-arrow;
+		}
+	}
+
+	/**
+	 * 4.1 Startpage - content area
+	 * ------------------------------------
+	 */
+	 .start-content {
+		margin-top: rem-calc(12);
+	}
+
+	 /*  news list */
+	 .section-title {
+	 	@include section-title-style;
+	 	font-size: rem-calc(16);
+	 	margin-right: 0;
+	 	margin-left: 0;
+	 }
+		.main-content .section-title {
+			 padding-left: 0;
+		}
+
+	 /* hbg special divider - check mixin for rgba values */
+	 .divider {
+	 	 margin-bottom: rem-calc(16);
+
+	 	.upper-divider,
+	 	.lower-divider {
+	 		display: block;
+	 	}
+	 	.upper-divider {
+	 		height: 4px;
+	 		margin-bottom: 3px;
+	 	}
+	 	.lower-divider {
+	 		height: 1px;
+	 	}
+	 }
+
+	 /* NEWS Sections & list */
+	 .news-section {
+	 	margin-top: rem-calc(16);
+		margin-bottom: rem-calc(16);
+	 }
+
+	 .news-list-large,
+	 .news-list-small {
+	 	list-style: none;
+	 	margin-left: 0;
+		li {
+			margin-bottom: rem-calc(32);
+
+			a {
+				display: block;
+				color: $black;
+
+				h2,
+				.read-more {
+					color: $blue-2;
+				}
+
+				.read-more {
+					display: block;
+					margin-top: 5px;
+				}
+
+				&:hover {
+					text-decoration: none;
+					color: $black;
+
+					h2,
+					.read-more {
+						text-decoration: underline;
+						color: $blue-1;
+					}
+				}
+			}
+		}
+	 }
+
+	  .news-list-small {
+	  	li {
+	  		margin-bottom: rem-calc(6);
+		  		.news-date {
+		  			float: right;
+		  			line-height: rem-calc(32);
+		  		}
+		  		.news-title {
+		  			font-size: rem-calc(16);
+		  			 a:after {
+  						content: $nbsp $text-arrow;
+  					}
+		  		}
+	  		}
+	  }
+
+	  .news-image img {
+	  	border-radius: $border-radius;
+	  }
+		ul.news-list-large.row section.news-section ul.news-list-large.row li.news-item.large-12.columns div.row div.large-5.medium-4.small-4.columns.news-image img
+		{
+			padding-left:0.9375rem;
+		}
+	  .news-title {
+	  	font-size: rem-calc(24);
+	  	margin-bottom: rem-calc(3);
+	  }
+	  .news-date {
+	  	font-size: rem-calc(12);
+	  	color: $gray-1;
+	  }
+
+
+	  /* hbg customized block-list,  */
+
+	  /* block style + generics */
+	  .block-list {
+			img {
+				border-radius: $border-radius;
+			}
+	  }
+	  .block-list.page-block-list {
+  		li {
+  			a:hover {
+  				text-decoration: none;
+  				> .list-title {
+  					text-decoration: underline;
+  				}
+  			}
+  			a .list-content {
+  				color: $black-text;
+  				display: none;
+  			}
+  			a .list-title {
+  				color: $blue-2;
+					margin-top: 0;
+  				&:after {
+  					content: $nbsp $text-arrow;
+  				}
+  			}
+			a .list-date {
+				font-size: rem-calc(12);
+				display: block;
+				color: $gray-1;
+			}
+			a img {
+				margin-bottom: rem-calc(8);
+			}
+  		}
+	  }
+
+	  /* list style */
+
+	  .block-list.page-block-list.page-list {
+	  	> li {
+	  		width: 100%;
+	  		padding-bottom: 0;
+	  		margin-bottom: rem-calc(32);
+
+	  		a img {
+		   		border-radius: $border-radius;
+		  		float: left;
+	  			margin-right: rem-calc(20);
+	  			max-width: 25%;
+	  		}
+	  		a .list-content {
+	  			display: block;
+	  		}
+			}
+	  }
+
+		.block-list.page-block-list.search-list {
+			margin-left: 0;
+			margin-right: 0;
+			> li {
+				width: 100%;
+				padding-bottom: rem-calc(16);
+				margin-bottom: rem-calc(16);
+				border-bottom: 1px solid $gray-1;
+				a .pdf-icon {
+					background-image: url(#{$wp-root-url}/assets/img/images/pdf-icon.png);
+					border-radius: $border-radius;
+					background-repeat: no-repeat;
+					margin-right: rem-calc(20);
+					display: inline-block;
+					height: 45px;
+					width: 45px;
+					float: left;
+				}
+				a .list-content {
+					display: block;
+				}
+			}
+			> li:last-child {
+				border: none;
+			}
+		}
+
+	  /* event-list */
+	.event-list-container {
+		padding-bottom: rem-calc(64);
+	}
+	.event-list-loader {
+		background: url(#{$wp-root-url}/assets/img/images/ajax-loader.gif) 0 0 no-repeat;
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		left: 50%;
+		margin-left: -16px; /* -1 * image width / 2 */
+		margin-top: -16px; /* -1 * image height / 2 */
+	}
+
+
+
+	/**
+	 * 4.2 article-page
+	 * ------------------------------------
+	 */
+
+	.article-page-layout {
+		.slider-container {
+			margin-bottom: rem-calc(10);
+			padding: 0;
+		}
+	}
+
+	.article-column {
+		background-color: $white;
+		@include border-top-radius;
+	}
+	.article {
+		margin-bottom: rem-calc(32);
+		overflow: hidden;
+		margin-top: rem-calc(16);
+
+		img {
+			border-radius: $border-radius;
+		}
+		.ingress p {
+			margin-bottom: rem-calc(16);
+			font-weight: bold;
+		}
+		.ingress {
+			margin-bottom: rem-calc(16);
+			font-weight: bold;
+		}
+	}
+
+	.article-body {
+		img {
+			max-width: 100%;
+			&.alignright,
+			&.alignleft {
+				max-width: 66%;
+			}
+		}
+		p {
+			margin-bottom: rem-calc(16);
+		}
+		ul + p {
+			margin-top: rem-calc(16);
+		}
+		ol + p {
+			margin-top: rem-calc(16);
+		}
+	}
+
+/**
+* 4.6 Forms
+* ------------------------------------
+*/
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+		display: inline !important;
+}
+.gform_wrapper .gfield_checkbox li input[type="checkbox"], .gform_wrapper .gfield_radio li input[type="radio"], .gform_wrapper .gfield_checkbox li input {
+    margin-top: 4px !important;
+}
+
+
+
+	/**
+	 * 4.7 Table-List + List search
+	 * ------------------------------------
+	 */
+
+
+	 /* table-list */
+	 .table-list {
+		width: 100%;
+	 	border-spacing: 0;
+		border-collapse: inherit;
+		border-radius: $border-radius;
+	 	.table-item td:last-child {
+	  		background: url(#{$wp-root-url}/assets/img/tablesorter-icons/asc.gif) 95% center no-repeat;
+	 	}
+	 	td,
+	 	th {
+	 		border: none;
+	 		padding: rem-calc(16) rem-calc(10);
+	 	}
+	 	thead th,
+	 	.table-item.odd {
+			background-color: scale-color($gray-3, $lightness: 70%);
+	 	}
+	 	.table-item {
+	 		&:hover {
+	 			cursor: pointer;
+				background-color: scale-color($gray-3, $lightness: 40%);
+	 		}
+	 		&.active {
+				background-color: scale-color($orange, $lightness: 50%);
+	 		}
+	 		td {
+	 			color: scale-color($black, $lightness: 20%);
+	 		}
+	 		td:last-child {
+	 			padding-right: rem-calc(24);
+	 		}
+	 	}
+	 }
+
+ 	.table-content {
+ 		h2 {
+ 			font-size: rem-calc(18);
+ 			font-weight: 500;
+ 			color: $headline-color;
+ 		}
+ 		td {
+ 			display: none;
+ 			background: $white;
+ 			@include box-shadow-advanced(0, 2, 1, 0,0,0,.35, true, false);
+ 			border-bottom: 1px solid scale-color($gray-3, $lightness: 30%);
+ 		}
+ 		.td-content,
+ 		.td-content p {
+ 			font-size: rem-calc(14);
+ 		}
+ 		&.open td {
+ 			display: table-cell;
+ 		}
+ 	}
+
+	.facts-table,
+	.table-list {
+		thead th:first-child,
+		tbody tr th {
+			display: none;
+		}
+	}
+
+
+	 /* table sorter plugin style */
+	 .table-list .header {
+	 	background: url(#{$wp-root-url}/assets/img/tablesorter-icons/bg.gif) right center no-repeat;
+	 	cursor: pointer;
+	 	&.headerSortDown {
+	 		background: url(#{$wp-root-url}/assets/img/tablesorter-icons/asc.gif) right center no-repeat;
+	 	}
+	 	&.headerSortUp {
+	 		background: url(#{$wp-root-url}/assets/img/tablesorter-icons/desc.gif) right center no-repeat;
+	 	}
+	 	&:last-child {
+	 		background-position: 95% center;
+	 	}
+	 }
+
+/**
+* 4.8 - 404-page
+* -----------------------------------------------------------------------------
+*/
+
+div.main-site-container div.row.errorpage {
+	width: 66.667%;
+	@include border-top-radius;
+	@include box-shadow-advanced(0, 3, 1, 255,255,255,1, false, true, 3, 0, 2, 0,0,0,0.4, false);
+	background-color: $white;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	min-height: rem-calc(400);
+
+}
+
+/**
+* 4.9 - Breadcrumb
+* -----------------------------------------------------------------------------
+*/
+.breadcrumbs {
+	background-color: #fff;
+	border:0;
+
+	* {
+		text-transform: none;
+	}
+}
+ul.breadcrumbs li {
+	font-size: 0.63rem;
+	//text-transform: lowercase;
+}
+ul.breadcrumbs li strong {
+	font-size: 0.63rem;
+}
+ul.breadcrumbs strong {
+	//text-transform: lowercase;
+}
+
+/**
+* 5.1 - Print
+* -----------------------------------------------------------------------------
+*/
+
+@media print {
+  .site-header.row, .sidebar.sidebar-right, .sidebar.sidebar-left, .accessability-menu, .footer, ul.breadcrumbs, .searchform, #read-speaker-player {
+			display: none !important; }
+}
+
+
+
+/**
+ * Custom MQ - Structure
+ * ----------------------------------------------------------------------------
+ */
+
+ @media #{$small-only} {
+	.main-content {
+		background: $white;
+		@include border-top-radius;
+	}
+	.slider-container {
+		 display: none;
+	}
+
+	div.main-site-container div.row.errorpage {
+		width: 90.6667%;
+	}
+	div.main-site-container div.row.errorpage h1 {
+		font-size: 1.9em;
+	}
+	.article-page-layout {
+ 		.sidebar-left {
+ 			display: none;
+ 		}
+ 	}
+ 	.news-section {
+		margin-top: rem-calc(0);
+		padding-top: rem-calc(16);
+		.news-image {
+			margin-bottom: rem-calc(16);
+		}
+ 	}
+ 	/*
+ 	.table-list {
+	 	thead, .table-item {
+	 			display: none;
+	 	}
+	 	.table-content td {
+			word-break: break-word;
+	 		display: table-cell;
+	 		box-shadow: none;
+	 	}
+ 	}
+ 	*/
+	
+
+ 	.filter-search {
+ 		input[type="text"] {
+ 		}
+ 	}
+ }
+@media #{$small-up} {
+	.site-bg {
+ 		top: rem-calc(200);
+ 	}
+	.block-list.page-block-list.page-list {
+		li a img {
+			max-width: 33%;
+		}
+	}
+
+ 	h1 {
+ 		font-size: rem-calc(27);
+ 	}
+ 	h2 {
+ 		font-size: rem-calc(24);
+ 	}
+ 	h3 {
+ 		font-size: rem-calc(20);
+ 	}
+ 	h4 {
+ 		font-size: rem-calc(18);
+ 	}
+ 	h5 {
+ 		font-size: rem-calc(16);
+ 	}
+ 	h6 {
+ 		font-size: rem-calc(14);
+ 	}
+
+}
+@media #{$small-medium-only} {
+	.table-list {
+		.table-item, thead {
+			td,
+			th {
+				display: none;
+			}
+
+			td:first-child,
+			th:nth-child(2) {
+				display: block;
+			}
+
+			td:first-child {
+				background: url("/wp-content/themes/Helsingborg/assets/img/tablesorter-icons/asc.gif") no-repeat scroll 95% center rgba(0, 0, 0, 0);
+			}
+		}
+	}
+}
+
+@media #{$medium-up} {
+ 	.article-page-layout,
+ 	.list-page-layout {
+ 		.sidebar-left {
+ 			display: block;
+ 			margin-top: rem-calc(100);
+ 		}
+ 	}
+ 	.site-bg {
+ 		top: rem-calc(180);
+ 	}
+	h1 {
+ 		font-size: rem-calc(32);
+ 	}
+ 	h2 {
+ 		font-size: rem-calc(24);
+ 	}
+ 	h3 {
+ 		font-size: rem-calc(20);
+ 	}
+ }
+ @media #{$large-up} {
+ 	.article-page-layout,
+ 	.list-page-layout {
+ 		.sidebar-left {
+ 			margin-top: rem-calc(120);
+ 		}
+ 	}
+
+ 	.filter-search {
+ 		width: 70%;
+ 	}
+
+	.block-list.page-block-list.page-list {
+		li a img {
+			max-width: 25%;
+		}
+	}
+	.site-bg {
+		top: rem-calc(210);
+ 	}
+}
+/**
+* 4.10 - Timestamp
+* -----------------------------------------------------------------------------
+*/
+.timestamp {
+	font-size: 0.63rem;
+}
+
+
+
+// Insert styles here

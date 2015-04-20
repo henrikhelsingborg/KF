@@ -1,0 +1,37 @@
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins listed below
+wp-content/plugins/*
+!wp-content/plugins/advanced-custom-fields
+!wp-content/plugins/akismet
+!wp-content/plugins/all-in-one-seo-pack
+!wp-content/plugins/all-in-one-wp-security-and-firewall
+!wp-content/plugins/broken-link-checker
+!wp-content/plugins/bulk-user-management
+!wp-content/plugins/cms-tree-page-view
+!wp-content/plugins/convert-post-types
+!wp-content/plugins/google-analytics-dashboard-for-wp
+!wp-content/plugins/gravity-forms-addons
+!wp-content/plugins/gravityforms
+!wp-content/plugins/helsingborg-alarm
+!wp-content/plugins/helsingborg-widgets
+!wp-content/plugins/image-widget
+!wp-content/plugins/members
+!wp-content/plugins/p3-profiler
+!wp-content/plugins/post-expirator
+!wp-content/plugins/safe-redirect-manager
+!wp-content/plugins/step-by-step
+!wp-content/plugins/w3-total-cache
+!wp-content/plugins/wp-page-widget
+
+# Ignore everything in the "themes" directory, except the Helsingborg theme
+!wp-content/themes/*

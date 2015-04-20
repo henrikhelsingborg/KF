@@ -1,0 +1,144 @@
+﻿/**
+ * Custom variables - Helsingborg.se
+ * ----------------------------------------------------------------------------
+ */
+
+ /* colors */
+$white 				             :	#FFFFFF;
+$black				             :	#000000;
+$black-text			           :	#222;
+
+$blue-1				             :	#45697d;
+$blue-2				             :	#009cde;
+$blue-3				             :	#00629b;
+$blue-4				             :	#93b1cc;
+$blue-5				             :	#dde8ec;
+
+$brown-1			             :	#665547;
+$brown-2			             :	#d6d7d3;
+
+$gray-1				             :	#747779;
+$gray-2				             :	#aeafaf;
+$gray-3				             :	#d6d7d3;
+
+$red				               :	#d62b1f;
+$orange				             :	#ed8b00;
+$pink				               :	#e782a9;
+$green				             :	#3f9c35;
+$light-green	             :	#a3ae00;
+$yellow				             :	#e1cd00;
+
+/* grayscale */
+$gray-10                    :  scale-color($black, $lightness: 10%);
+$gray-20                    :  scale-color($black, $lightness: 20%);
+$gray-30                    :  scale-color($black, $lightness: 30%);
+$gray-40                    :  scale-color($black, $lightness: 40%);
+$gray-50                    :  scale-color($black, $lightness: 50%);
+$gray-60                    :  scale-color($black, $lightness: 60%);
+$gray-70                    :  scale-color($black, $lightness: 70%);
+$gray-80                    :  scale-color($black, $lightness: 80%);
+$gray-90                    :  scale-color($black, $lightness: 90%);
+
+/* color - interpolations */
+/* site-areas */
+$header-color	              :	#8fa5b1;
+$footer-bg-color            : $blue-1;
+$widget-border-color        : $gray-90;
+
+/* push links */
+$main-nav-hover-color       :	 ;
+$main-nav-text-color        : $black-text;
+
+$headline-color			        : scale-color($black, $lightness: 20%);
+
+/* Buttons */
+$button-color-standard      : $orange;
+
+/* forms */
+$form-text-color            : scale-color($black, $lightness: 30%);
+
+/* form-validation */
+$form-validation-color      : $orange;
+$form-validation-bg-color   : lighten($form-validation-color, 40%);
+$form-validation-text-color : darken($form-validation-color, 10%);
+
+/* alert colors */
+/* warnings*/
+$warning-color              : $yellow;
+$warning-bg-color           : lighten($warning-color, 40%);
+$warning-text-color         : darken($orange, 10%);
+$warning-border-color       : darken($orange, 10%);
+
+/* info */
+$info-color                 : $blue-2;
+$info-bg-color              : lighten($info-color, 46%);
+$info-text-color            : darken($info-color, 10%);
+$info-border-color          : lighten($info-color, 10%);
+
+/* colors for .push-link-widget */
+$self-service-color		      :	#4cbae8;
+$report-error-color		      :	#78ba71;
+$feedback-color			        :	#eadc4c;
+$tourism-color			        :	#dadf99;
+$company-color			        :	#f3eb99;
+$inspiration-color		      :	#f5cddd;
+
+/* mobile colors */
+$mobile-nav-bg-color          : $blue-1;
+$mobile-nav-base-color        : #507a91;
+$mobile-nav-border-color	    : $mobile-nav-base-color;
+$mobile-nav-active-color	    : $mobile-nav-base-color;
+$mobile-nav-text-color        : $white;
+
+/* misc */
+$list-item-label-color        : $gray-60;
+
+/* Box-shadows */
+$box-shadow-color 	        :	"0, 0, 0, 0.5";
+
+/* Grid and MQ adjustments */
+$max-site-width		          :	1280;	/* Extends the foundation max width */
+$site-outer-padding         :	15;		/* Outer container padding */
+
+/* positioning and z-index levels */
+$level-1 			              :	100;
+$level-2			              :	200;
+$level-3			              :	300;
+$level-4			              :	100;
+
+/* URLs */
+$wp-root-url		            :	"/helsingborgkf/wp-content/themes/Helsingborg";
+$wp-theme-img-url	          :	"assets/img/images";
+$wp-font-url		            :	"assets/fonts";
+
+/* Borders */
+$border-radius		          :	4px;
+$border-radius-circle       : 200px;
+
+/* Icons */
+$arrow-solid-down		        :	"\e606";
+$arrow-solid-right		      :	"\e607";
+$arrow-thin-right		        :	"\e608";
+$check					            :	"\e609";
+$close					            :	"\e60a";
+$home					              :	"\e60b";
+$link					              :	"\e60c";
+$menu-1					            :	"\e60d";
+$menu-2					            :	"\e60e";
+$minus					            :	"\e60f";
+$plus					              :	"\e610";
+$rss					              :	"\e611";
+$search					            :	"\e612";
+$speaker				            :	"\e600";
+$facebook				            :	"\e622";
+$twitter				            :	"\e621";
+$instagram                  : "\e602";
+$warning                    : "\e620";
+$info                       : "\e601";
+
+/* unicode symbols */
+$text-arrow				          : "»";
+$nbsp					              :	"\00a0";
+$arrow-next                 : "\BB";
+$arrow-prev                 : "\AB";
+$close                      : "\D7";

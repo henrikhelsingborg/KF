@@ -1,0 +1,57 @@
+/* Search specific styles */
+
+/* placeholder style */
+%search-inputs {
+//  border-radius: $border-radius;
+//  border: 2px solid $orange;
+//  font-size: rem-calc(16);
+//  @include box-shadow-advanced(1, 1, 3, 0,0,0,0.45, false,false);
+}
+
+/* main search container */
+.search-inputs {
+  padding-top: rem-calc(18);
+  padding-bottom: rem-calc(18);
+  input[type="text"] {
+    //@extend %search-inputs;
+    float: left;
+    margin-right: 5%;
+    width: 75%;
+    margin-bottom: 0;
+    @include box-shadow(1px, 0.15);
+  }
+  .search {
+    width: 20%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.archive-search-link {
+  display: block;
+  font-size: rem-calc(14);
+  margin-top: rem-calc(10);
+  @include global-link-style;
+}
+
+@media #{$medium-up} {
+  .search-inputs {
+    input[type="text"] {
+      width: 70%;
+    }
+    .search {
+      width: 25%;
+    }
+  }
+}
+
+@media #{$large-up} {
+  .search-inputs {
+    input[type="text"] {
+      width: 75%;
+    }
+    .search {
+      width: 20%;
+    }
+  }
+}

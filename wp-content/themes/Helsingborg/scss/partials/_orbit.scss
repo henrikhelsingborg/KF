@@ -1,0 +1,22 @@
+/* foundation orbit slider */
+
+/* orbit slider container */
+.slider-container {
+  margin-bottom: rem-calc(16);
+}
+
+/* orbit slider slider component */
+.orbit-container {
+  @include box-shadow(5px);
+  .img-slide {
+    border-radius: $border-radius;
+  }
+  .orbit-slides-container {
+    .orbit-caption {
+      background: rgba(0,0,0,0.7);
+    }
+  }
+}
+.orbit-bullets-container {
+  display: none;
+}

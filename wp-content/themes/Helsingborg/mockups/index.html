@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Helsingborg stad</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../css/app.css">
+      <!--  <link rel="stylesheet" href="../css/normalize.css">-->
+
+        <script src="../js/modernizr/modernizr.min.js"></script>
+        <script src="../js/jquery/dist/jquery.min.js"></script>
+
+        <!-- LET's PHPify this -->
+        <style>
+           .divider.fade .upper-divider,
+           .divider.fade .lower-divider {
+                background: rgb(237,139,0); /* Old browsers */ /* HEX värde här */
+                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlZDhiMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+                background: -moz-linear-gradient(left,  rgba(237,139,0,1) 60%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(60%,rgba(237,139,0,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(left,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* IE10+ */
+                background: linear-gradient(to right,  rgba(237,139,0,1) 60%,rgba(255,255,255,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed8b00', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+                }
+                .divider .upper-divider,
+                .divider .lower-divider {
+                    background-color: rgba(237,139,0, 1);
+                }
+                .button {
+                  background-color: rgba(237,139,0, 1) !important;
+                  border: 1px solid rgba(237,139,0, 0.5) !important;
+                  color: #FFF !important;
+                }
+                .input-field {
+                  border: 2px solid rgba(237,139,0, 0.5) !important;
+                }
+
+        </style>
+        <!-- EN PHPify -->
+    </head>
+    <body>
+        <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+
+
+        <aside class="left-off-canvas-menu">
+            <ul class="mobile-nav-list" role="navigation">
+                <li><a href="#">Arbete</a></li>
+                <li><a href="#">Bygga, Bo och miljö</a></li>
+                <li><a href="#">Förskola och utbildning</a></li>
+                <li><a href="#">Kommun och politik</a></li>
+                <li><a href="#">Omsorg och stöd</a></li>
+                <li class="current-node">
+                    <a href="#">Trafik och stadsplanering</a>
+
+                    <ul>
+                        <li><a href="#">Biltrafik</a></li>
+                        <li><a href="#">Buss, båt och tåg</a></li>
+                        <li><a href="#">Cykling</a></li>
+                        <li><a href="#">Gator och trottoarer</a></li>
+                        <li><a href="#">Parkering</a></li>
+                        <li>
+                            <a href="#">Planering och utveckling</a>
+                            <ul>
+                                <li><a href="#">Detaljplanering</a></li>
+                                <li class="current">
+                                    <a href="#">Översiktsplanering</a>
+                                    <ul>
+                                        <li><a href="#">Gällande översiksplaner</a></li>
+                                        <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#">Renhållning och snöröjning</a></li>
+                                <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Parkering</a></li>
+                        <li><a href="#">Test nod</a></li>
+                        <li><a href="#">Test nod</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">Uppleva och göra</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+                <li><a href="#">Uppleva och göra - test</a></li>
+            </ul>
+        </aside>
+
+        <a class="exit-off-canvas"></a>
+        <nav class="mobile-nav" role="navigation">
+            <div class="mobile-navigation clearfix" role="navigation">
+                <a href="#" class="show-mobile-nav left-off-canvas-toggle">Meny</a>
+                <a href="#" class="show-mobile-search">Sök</a>
+            </div>
+            <div class="mobile-search">
+                        <div class="mobile-search-input-container">
+                            <input type="text" class="mobile-search-input" placeholder="Din S&ouml;kning"/>
+                            <input type="submit" class="mobile-search-btn" value="s&ouml;k" />
+                        </div>
+                    </div>
+        </nav><!-- mobile top nav -->
+
+        <div class="main-site-container">
+            <div class="site-bg"></div>
+
+            <div class="site-header row">
+                <div class="site-logo large-4 medium-4 columns">
+                    <a href="#" class="logo-link">
+                        <img src="../assets/img/images/hbg-logo.svg" alt="helsingborg stad" class="logo" />
+                    </a>
+                </div><!-- /.site-logo -->
+
+                <div class="support-nav large-8 medium-8 columns">
+
+                    <a href="#" class="show-support-nav">Hjälpmeny</a>
+
+                    <ul class="support-nav-list inline-list">
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Larm</a></li>
+                        <li><a href="#">Teckenspråk</a></li>
+                        <li><a href="#">Lättläst</a></li>
+                        <li><a href="#">RSS</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Translate</a></li>
+
+                    </ul>
+                </div><!-- /.support-nav -->
+            </div><!-- /.site-header -->
+
+            <div class="main-page-layout row">
+                <!-- main-page-layout -->
+                <div class="main-area large-9 columns">
+
+
+                  <!-- BIG ALERT tema class .warning-->
+                  <!--<div class="alert row">
+                    <div class="small-12 columns">
+                      <div class="alert-msg warning">
+
+                        <a href="#" class="alert-link" title="link-title">
+                          Olycka i hamnen. Fara för allmänheten
+                        </a>
+                        <p>
+                          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                        </p>
+
+                      </div>--><!-- /.alert-msg -->
+                    <!--</div>--><!-- /.columns -->
+                  <!--</div>--><!-- /.alert-row -->
+                  <!-- END BIG ALERT -->
+
+                  <!-- BIG INFO, samma fast med tema class .info -->
+                  <!--
+                  <div class="alert row">
+                    <div class="small-12 columns">
+                      <div class="alert-msg info">
+
+                        <a href="#" class="alert-link" title="link-title">
+                            Brist på parkeringplatser i city pga. servicearbete
+                        </a>
+                        <p>
+                          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                        </p>
+
+                      </div>--><!-- /.alert-msg -->
+                    <!--</div>--><!-- /.columns -->
+                  <!--</div>--><!-- /.alert-row -->
+                  <!-- END BIG INFO -->
+
+
+
+                    <div class="row">
+
+                        <!--<div class="large-12 columns slide">
+
+                            <img src="http://www.placehold.it/1024x400" alt="slider" class="img-slide" />
+
+                        </div>-->
+                        <div class="large-12 columns slider-container">
+                            <!-- START ORBIT -->
+                             <ul class="example-orbit" data-orbit>
+                              <li>
+                                <img src="http://www.placehold.it/1024x400&text=Slide+1" alt="slide 1" class="img-slide" />
+                                <div class="orbit-caption">
+                                  Caption One.
+                                </div>
+                              </li>
+                              <li class="active">
+                                <img src="http://www.placehold.it/1024x400&text=Slide+2" alt="slide 2" class="img-slide" />
+                                <div class="orbit-caption">
+                                  Caption Two.
+                                </div>
+                              </li>
+                              <li>
+                                <img src="http://www.placehold.it/1024x400&text=Slide+3" alt="slide 3" class="img-slide" />
+                                <div class="orbit-caption">
+                                  Caption Three.
+                                </div>
+                              </li>
+                            </ul>
+                            <!-- END ORBIT -->
+                        </div><!-- /.slider-container -->
+                    </div><!-- /.row -->
+
+                    <div class="main-content row">
+                        <!-- SIDEBAR LEFT -->
+                        <div class="sidebar large-4 medium-4 columns">
+                            <div class="row">
+                            <!-- OLD search
+                            <div class="search-inputs large-12 columns">
+                                <input type="text" placeholder="Vad letar du efter?" name="search" class="input-field"/>
+                                <input type="submit" value="Sök" class="button search">
+
+                            <a href="#" class="archive-search-link">S&ouml;k i arkivet</a>
+
+                            </div>--><!-- /.search-inputs -->
+
+                              <form role="search"  class="search-inputs large-12 columns" method="get" id="searchform" action="http://localdev.helsingborg.se:9094/">
+                                      <input type="text" value="" class="input-field" name="s" id="s" placeholder="Vad letar du efter?">
+                                            <input type="submit" id="searchsubmit" value="Sök" class="button search">
+                                      <a href="http://helsingborg.arkivbyran.se/" class="archive-search-link">Du kan också söka i arkivet</a>
+                              </form>
+
+                                <!-- large-up menu-->
+                                <nav class="main-nav large-12 columns show-for-medium-up" role="navigation">
+                                    <ul class="main-nav-list">
+                                        <li><a href="#">Arbete</a></li>
+                                        <li><a href="#">Bygga, Bo och miljö</a></li>
+                                        <li><a href="#">Förskola och utbildning</a></li>
+                                        <li><a href="#">Kommun och politik</a></li>
+                                        <li><a href="#">Omsorg och stöd</a></li>
+                                        <li class="current-node">
+                                            <a href="#">Trafik och stadsplanering</a>
+
+                                            <ul>
+                                                <li><a href="#">Biltrafik</a></li>
+                                                <li><a href="#">Buss, båt och tåg</a></li>
+                                                <li><a href="#">Cykling</a></li>
+                                                <li><a href="#">Gator och trottoarer</a></li>
+                                                <li><a href="#">Parkering</a></li>
+                                                <li>
+                                                    <a href="#">Planering och utveckling</a>
+
+                                                    <ul>
+                                                        <li><a href="#">Detaljplanering</a></li>
+                                                        <li class="current">
+                                                            <a href="#">Översiktsplanering</a>
+                                                            <ul>
+                                                                <li><a href="#">Gällande översiksplaner</a></li>
+                                                                <li><a href="#">Översiktsplaner under arbete</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Renhållning och snöröjning</a></li>
+                                                        <li><a href="#">Trafik -och byggprojekt</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Parkering</a></li>
+
+                                            </ul>
+
+                                        </li>
+                                        <li><a href="#">Uppleva och göra</a></li>
+                                    </ul>
+
+                                </nav><!-- /.navigation -->
+                                <!-- END large up menu-->
+
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar-left -->
+
+                        <section class="news-section large-8 medium-8 columns">
+
+                            <ul class="accessability-menu">
+                                <li>
+                                  <a href="#" class="icon speaker" title="lyssna på innehållet">Lyssna på</a>
+                                </li>
+                            </ul>
+
+                            <h1 class="section-title">Aktuellt i Helsingborg stad</h1>
+
+                            <div class="divider fade">
+                                <div class="upper-divider"></div>
+                                <div class="lower-divider"></div>
+                            </div>
+
+                                <ul class="news-list-large row">
+                                    <!-- ALERT example -->
+                                    <li class="news-item large-12 columns">
+
+                                      <div class="alert-msg info">
+
+                                        <a href="#" class="alert-link" title="link-title">
+                                            Brist på parkeringplatser i city pga. servicearbete
+                                        </a>
+                                        <p>
+                                          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                                        </p>
+
+                                      </div>
+
+                                    </li>
+
+                                    <li class="news-item large-12 columns">
+
+                                      <div class="alert-msg warning">
+
+                                        <a href="#" class="alert-link" title="link-title">
+                                            Brist på parkeringplatser i city pga. servicearbete
+                                        </a>
+                                        <p>
+                                          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                                        </p>
+
+                                      </div>
+
+                                    </li>
+                                    <!-- END ALERT example-->
+
+
+                                    <li class="news-item large-12 columns">
+                                        <div class="row">
+                                            <div class="large-4 medium-4 small-12 columns news-image">
+                                                <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                            </div>
+                                            <div class="large-8 medium-8 small-12 columns news-content">
+                                                <h2 class="news-title">Du kan f&ouml;rtidsr&ouml;sta innan valdagen</h2>
+                                                <span class="news-date">28 aug 2014 15:58</span>
+                                                <p>Den 27 augusti-13 september kan du f&ouml;rtidsr&ouml;sta p&aring; flera platser i Helsingborg. F&ouml;r att r&ouml;sta m&aring;ste du le- gitimera dig, ta med giltig id-handling och r&ouml;stkort till vallokalen.</p>
+                                                <a href="#" class="read-more">L&auml;s mer</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                     <li class="news-item large-12 columns">
+                                        <div class="row">
+                                            <div class="large-4 medium-4 small-12 columns news-image">
+                                                <img src="http://www.placehold.it/300x200" alt="alt-text" />
+                                            </div>
+                                            <div class="large-8 medium-8 small-12 columns news-content">
+                                                <h2 class="news-title">Du kan f&ouml;rtidsr&ouml;sta innan valdagen</h2>
+                                                <span class="news-date">28 aug 2014 15:58</span>
+                                                <p>Den 27 augusti-13 september kan du f&ouml;rtidsr&ouml;sta p&aring; flera platser i Helsingborg. F&ouml;r att r&ouml;sta m&aring;ste du le- gitimera dig, ta med giltig id-handling och r&ouml;stkort till vallokalen.</p>
+                                                <a href="#" class="read-more">L&auml;s mer</a>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="news-item large-12 columns">
+                                        <div class="row">
+                                            <div class="large-4 medium-4 small-12 columns news-image">
+                                                <img src="http://www.placehold.it/300x200" alt="alt-text"/>
+                                            </div>
+                                            <div class="large-8 medium-8 small-12 columns news-content">
+                                                <h2 class="news-title">Du kan f&ouml;rtidsr&ouml;sta innan valdagen</h2>
+                                                <span class="news-date">28 aug 2014 15:58</span>
+                                                <p>Den 27 augusti-13 september kan du f&ouml;rtidsr&ouml;sta p&aring; flera platser i Helsingborg. F&ouml;r att r&ouml;sta m&aring;ste du le- gitimera dig, ta med giltig id-handling och r&ouml;stkort till vallokalen.</p>
+                                                <a href="#" class="read-more">L&auml;s mer</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul><!-- /.news-list -->
+                        </section><!-- /.news-section -->
+
+
+
+                </div><!-- /.main-content -->
+
+                    <div class="lower-content row">
+                        <div class="sidebar large-4 columns">
+                            <div class="row">
+                                <div class="push-links-widget widget large-12 columns">
+                                    <ul class="push-links-list">
+                                        <li class="item-1"><a href="#">Självservice</a></li>
+                                        <li class="item-2"><a href="#">Felanmälan</a></li>
+                                        <li class="item-3"><a href="#">Tyck till</a></li>
+                                        <li class="item-4"><a href="#">Turism</a></li>
+                                        <li class="item-5"><a href="#">Företag</a></li>
+                                        <li class="item-6"><a href="#">Inspiration</a></li>
+
+                                    </ul>
+
+                                </div><!-- /.widget -->
+                            </div><!-- /.row -->
+                        </div><!-- /.sidebar -->
+
+                        <section class="large-8 columns">
+                            <ul class="block-list news-block-list large-block-grid-3 medium-block-grid-3 small-block-grid-2">
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://www.placehold.it/330x270" alt="alt-text"/>
+                                    </li>
+                                </ul>
+
+                        </section>
+
+                    </div><!-- /.lower-content -->
+                </div>  <!-- /.main-area -->
+
+                <div class="sidebar large-3 columns">
+                    <div class="row">
+                        <div class="calendar-event-widget widget large-12 medium-6 columns">
+                            <div class="widget-content">
+
+                                <h2 class="widget-title">Evenemang i Helsingborg</h2>
+
+                                <div class="divider">
+                                    <div class="upper-divider"></div>
+                                    <div class="lower-divider"></div>
+                                </div>
+
+                                <ul class="calendar-list">
+                                    <li>
+                                        <span class="date">idag 13:00</span>
+                                        <a href="#">Tårtkalas i tågaparken</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">idag 15:00</span>
+                                        <a href="#">Bakom kulisserna på stadsarkivet</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-03</span>
+                                        <a href="#">Samhällsåret - en antology med filmer inför valet</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-03</span>
+                                        <a href="#">Från ärans fält till slakterifabriken</a>
+                                    </li>
+                                    <li>
+                                        <span class="date">2014-09-04</span>
+                                        <a href="#">Nära leran - Sommarutställning på Keramiskt center</a>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="read-more">Fler evenemang</a>
+
+                            </div><!-- /.widget-content -->
+
+                        </div><!-- /.widget -->
+
+                        <div class="news-widget large-12 widget medium-6 columns">
+                            <div class="widget-content">
+
+                                <h2 class="widget-title">Fler nyheter<span class="icon"></span></h2>
+
+                                <div class="divider">
+                                    <div class="upper-divider"></div>
+                                    <div class="lower-divider"></div>
+                                </div>
+
+
+                                <ul class="news-list">
+
+                                  <li class="alert-msg warning">
+                                    <a href="#">Detta är en alert-box med en varning</a>
+                                    <span class="date">idag 13:00</span>
+                                  </li>
+
+                                  <li class="alert-msg info">
+                                    <a href="#">Detta är en alert-box med info</a>
+                                    <span class="date">idag 13:00</span>
+                                  </li>
+
+                                    <li>
+                                        <a href="#">Tårtkalas i tågaparken</a>
+                                        <span class="date">idag 13:00</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bakom kulisserna på stadsarkivet</a>
+                                        <span class="date">idag 15:00</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Samhällsåret - en antology med filmer inför valet</a>
+                                        <span class="date">2014-09-03</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Från ärans fält till slakterifabriken</a>
+                                        <span class="date">2014-09-03</span>
+
+                                    </li>
+                                    <li>
+                                        <a href="#">Nära leran - Sommarutställning på Keramiskt center</a>
+                                        <span class="date">2014-09-04</span>
+
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="read-more">Fler evenemang</a>
+
+                            </div><!-- /.widget-content -->
+                        </div><!-- /.widget -->
+
+                      <div class="quick-links-widget widget large-12 medium-6 columns">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Hitta snabbt</h2>
+
+                                <div class="divider">
+                                    <div class="upper-divider"></div>
+                                    <div class="lower-divider"></div>
+                                </div>
+
+                                <ul class="quick-links-list">
+                                    <li>
+                                        <a href="#">Budgetrådgivning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Gymnasieskolor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kartor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Konsumentrådgivning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lediga jobb</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ombud för funktionsnedsatta</a>
+                                    </li>
+                                </ul>
+
+                            </div><!-- /.widget-content -->
+                    </div><!-- /.widget -->
+                </div><!-- /.rows -->
+            </div><!-- /.sidebar -->
+
+            </div>
+        </div><!-- /.main-site-container -->
+
+
+        <footer class="footer">
+            <div class="row">
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Kontakta Helsingborgsstad</h2>
+
+                        <p>
+    Till Helsingborg kontaltcenter kan du v&auml;nda dig med alla dina &auml;renden och fr&aring;gor som har med v&aring;r kommun att g&ouml;ra. V&aring;ra kommunv&auml;gledare finns p&aring; plats f&ouml;r att hj&auml;lpa dig, och om det skulle beh&ouml;vas s&aring; v&auml;gleder vi dig vidare till r&auml;tt person eller verksamhet inom Helsingborgs stad.
+                        </p>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-12 columns">
+                    <div class="footer-content">
+
+                        <p>
+                            Telefonnummer
+                            042-10 50 00
+                            &ouml;ppettider
+                            M&aring;ndag–torsdag 07:00–19:00. Fredag 07:00–17:00.
+                            L&ouml;rdag 10:00–15:00.
+                            Bes&ouml;ksadress
+                            Stortorget 17
+                            <a href="#" class="push-link">Visa pa karta</a>
+                            Postadress
+                            xxxxxxxxxxxxxxx
+                        </p>
+                    </div><!-- /.footer-content -->
+                </div>
+
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Om webbplatsen</h2>
+                        <ul>
+                            <li><a href="#">Om cookies</a></li>
+                            <li><a href="#">Om tillgänglighet</a></li>
+                            <li><a href="#">Anpassa</a></li>
+                            <li><a href="#">Sajtkarta</a></li>
+                        </ul>
+
+                        <a href="#" class="push-link">Mer om webbplatsen</a>
+
+                    </div><!-- /.footer-content -->
+                </div>
+                <div class="large-3 medium-6 columns">
+                    <div class="footer-content">
+                        <h2 class="footer-title">Helsingborgs stad i sociala medier</h2>
+
+                        <ul class="icon-link-list">
+                          <li>
+                              <a href="#" class="facebook-icon icon-link" title="följ Helsingborg på facebook">följ Helsingborg på facebook</a>
+                          </li>
+                          <li>
+                              <a href="#" class="twitter-icon icon-link" title="följ Helsingborg på twitter">Helsingborg stads twitter flöde</a>
+                          </li>
+                          <li>
+                              <a href="#" class="instagram-icon icon-link" title="Helsingborg stad på Instagram">Helsingborg stad på Instagram</a>
+                          </li>
+                        </ul>
+
+                    </div><!-- /.footer-content -->
+                </div>
+            </div>
+
+        </footer>
+        </div><!-- /.inner-wrap -->
+        </div><!-- /.main-site-container -->
+
+        <script src="../js/app.js"></script>
+        <script src="../js/dev/hbg.dev.js"></script>
+    </body>
+</html>
