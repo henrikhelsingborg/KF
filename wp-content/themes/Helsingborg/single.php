@@ -1,9 +1,7 @@
 <?php get_header(); ?>
+<?php get_template_part('templates/partials/beforeblogloop','section'); ?>
 <div class="row">
-	<div class="small-12 large-8 columns" role="main">
-
-	<?php do_action('Helsingborg_before_content'); ?>
-
+	<div class="small-12 medium-12 large-12 columns" role="main">
 	<?php while (have_posts()) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
@@ -27,15 +25,10 @@
 				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'Helsingborg'), 'after' => '</p></nav>' )); ?>
 				<p><?php the_tags(); ?></p>
 			</footer>
-			<?php do_action('Helsingborg_post_before_comments'); ?>
 			<?php comments_template(); ?>
-			<?php do_action('Helsingborg_post_after_comments'); ?>
 		</article>
 	<?php endwhile;?>
-
-	<?php do_action('Helsingborg_after_content'); ?>
-
 	</div>
-	<?php get_sidebar(); ?>
 </div>
+<?php get_template_part('templates/partials/afterblogloop','section'); ?>
 <?php get_footer(); ?>

@@ -1,7 +1,8 @@
 <?php get_header(); ?>
+<?php get_template_part('templates/partials/beforeblogloop','section'); ?>
 <div class="row">
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-12 large-12 columns" role="main">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -24,6 +25,6 @@
 	<?php } ?>
 
 	</div>
-	<?php get_sidebar(); ?>
 </div>
+<?php get_template_part('templates/partials/afterblogloop','section'); ?>
 <?php get_footer(); ?>

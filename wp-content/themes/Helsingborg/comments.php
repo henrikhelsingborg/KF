@@ -23,6 +23,9 @@
 			</section>
 
 		</article>
+	</li>
+	<?php get_template_part('templates/partials/divider','section'); ?>
+
 <?php } ?>
 
 <?php
@@ -41,6 +44,7 @@
 	}
 ?>
 <?php // You can start editing here. Customize the respond form below ?>
+
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
 		<h3><?php comments_number(__('No Responses to', 'Helsingborg'), __('One Response to', 'Helsingborg'), __('% Responses to', 'Helsingborg') ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
@@ -56,6 +60,7 @@
 		</footer>
 	</section>
 <?php endif; ?>
+
 <?php if ( comments_open() ) : ?>
 <section id="respond">
 	<h3><?php comment_form_title( __('Leave a Reply', 'Helsingborg'), __('Leave a Reply to %s', 'Helsingborg') ); ?></h3>

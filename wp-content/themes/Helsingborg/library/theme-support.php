@@ -1,7 +1,9 @@
 <?php
 function Helsingborg_theme_support() {
     // Add language support
-    load_theme_textdomain('Helsingborg', get_template_directory() . '/languages');
+    //load_theme_textdomain('Helsingborg', get_template_directory() . '/languages');
+    load_theme_textdomain('Helsingborg', content_url() . '/languages/themes');
+    
 
     // Add menu support
     add_theme_support('menus');
@@ -14,7 +16,7 @@ function Helsingborg_theme_support() {
     add_theme_support('automatic-feed-links');
 
     // Add post formarts support: http://codex.wordpress.org/Post_Formats
-    add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+    //add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
 }
 

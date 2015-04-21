@@ -6,7 +6,6 @@ $the_content = get_extended($post->post_content);
 $main = $the_content['main'];
 $content = $the_content['extended']; // If content is empty, no <!--more--> tag was used -> content is in $main
 ?>
-
 <div class="article-page-layout row">
 	<!-- main-page-layout -->
 	<div class="main-area large-9 columns">
@@ -56,6 +55,7 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 								echo apply_filters('the_content', $main);
 							} ?>
 						</div>
+						<?php comments_template(); ?>
 					</article>
 				<?php endwhile; // End the loop ?>
 

@@ -436,15 +436,30 @@ function the_breadcrumb() {
     global $post;
     $title = get_the_title();
     $output = '';
+    
+    if( get_option( 'show_on_front' ) == 'page' ) {
+	    $blogPageURL = get_permalink( get_option('page_for_posts' ) );
+	    $blogPageTITLE = get_page( get_option('page_for_posts' ) )->post_title;
+	}   
+	else {
+		$blogPageURL = get_bloginfo('url');
+		$blogPageTITLE = get_bloginfo('name');
+	}
     echo '<ul class="breadcrumbs">';
     if (!is_front_page()) {
-        if (is_category() || is_single()) {
-            echo '<li>';
-            the_category(' <li> ');
+        if (is_category() || is_tag() || is_author() || is_single()) {
+            echo '<li><a href="'.$blogPageURL.'">'.$blogPageTITLE.'</a></li>';
+            if (is_category()) {
+            	echo '<li>'; the_category(' <li> ');
+            }
+            if (is_tag()) {
+				echo '<li>'; single_tag_title(); echo '</li>';
+            }
+            if (is_author()) {
+				echo '<li>'.get_the_author().'</li>';
+            }
             if (is_single()) {
-                echo '<li>';
-                the_title();
-                echo '</li>';
+                echo '<li>'.get_the_title().'</li>';
             }
         } elseif (is_page()) {
             if($post->post_parent){

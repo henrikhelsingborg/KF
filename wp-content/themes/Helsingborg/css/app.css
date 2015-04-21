@@ -7600,6 +7600,9 @@ a.clickable_excerpt_text {
     color: #fff;
     text-decoration: none; }
 
+.commentlist ul {
+  list-style: none; }
+
 /* Assets */
 /* 
  * Foundation Icons v 3.0
