@@ -91,16 +91,7 @@ class HbgBookingWidget extends WP_Widget {
             jQuery('.datepicker_booking_widget').on('click', function() {
                 jQuery(this).datepicker({ dateFormat: "yy-mm-dd" });
                 jQuery(this).datepicker('show');
-            }); 
-            
-            /*
-            jQuery('.widget-control-save').on('click', function() {
-                alert(jQuery(this).attr("id"));            
-            }); 
-			*/
-           
-            
-                       
+            });                        
         </script>
     <?php
 		if ( isset( $instance[ 'show_placement' ] ) ) {

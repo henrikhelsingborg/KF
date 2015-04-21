@@ -71,9 +71,9 @@ class AIOWPSecurity_Utility
         
         //check users table
         //$user = $wpdb->get_var( "SELECT user_login FROM `" . $wpdb->users . "` WHERE user_login='" . sanitize_text_field( $username ) . "';" );
-        $sql_1 = $wpdb->prepare("SELECT %s FROM $wpdb->users WHERE user_login=%s", 'user_login', sanitize_text_field( $username ));
+        $sql_1 = $wpdb->prepare("SELECT user_login FROM $wpdb->users WHERE user_login=%s", sanitize_text_field( $username ));
         $user = $wpdb->get_var( $sql_1 );
-        $sql_2 = $wpdb->prepare("SELECT %s FROM $wpdb->users WHERE ID=%s", 'ID', sanitize_text_field( $username ));
+        $sql_2 = $wpdb->prepare("SELECT ID FROM $wpdb->users WHERE ID=%s", sanitize_text_field( $username ));
         $userid = $wpdb->get_var( $sql_2 );
 
         if ( $user == $username || $userid == $username ) {
@@ -112,6 +112,22 @@ class AIOWPSecurity_Utility
     {
         //Charecters present in table prefix
         $allowed_chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        $string = '';
+        //Generate random string
+        for ($i = 0; $i < $string_length; $i++) {
+            $string .= $allowed_chars[rand(0, strlen($allowed_chars) - 1)];
+        }
+        return $string;
+    }
+    
+    
+    /*
+     * Generates a random number using a-z characters
+     */
+    static function generate_alpha_random_string($string_length)
+    {
+        //Charecters present in table prefix
+        $allowed_chars = 'abcdefghijklmnopqrstuvwxyz';
         $string = '';
         //Generate random string
         for ($i = 0; $i < $string_length; $i++) {
@@ -483,6 +499,17 @@ class AIOWPSecurity_Utility
         
     }
     
-    
+    /*
+     * Checks if the string exists in the array key value of the provided array. If it doesn't exist, it returns the first key element from the valid values.
+     */
+    static function sanitize_value_by_array($to_check, $valid_values)
+    {
+        $keys = array_keys($valid_values);
+        $keys = array_map('strtolower', $keys);
+        if ( in_array( $to_check, $keys ) ) {
+            return $to_check;
+        }
+        return reset($keys);//Return he first element from the valid values
+    }
     
 }
