@@ -42,7 +42,13 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 		                </footer>
 		            </article>
 	            <?php endwhile; // End the loop ?>
-	
+				
+				<?php if ( (is_active_sidebar('content-area') == TRUE) ) : ?>
+                  <?php dynamic_sidebar("content-area"); ?>
+                <?php endif; ?>
+				
+				
+				
 				<section class="samlingssidor_output">
 					<ul class="row">		
 						<?php			
@@ -147,10 +153,11 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 						} //for loop ?>
 					</ul>
 				</section>
-
-                <?php if ( (is_active_sidebar('content-area') == TRUE) ) : ?>
-                  <?php dynamic_sidebar("content-area"); ?>
-                <?php endif; ?>
+				
+				<?php if ( (is_active_sidebar('content-area-bottom') == TRUE) ) : ?>
+					<?php dynamic_sidebar("content-area-bottom"); ?>
+				<?php endif; ?>
+                
 
         	</div><!-- /.columns -->
     	</div><!-- /.main-content -->
