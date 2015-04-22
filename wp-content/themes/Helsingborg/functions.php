@@ -35,4 +35,8 @@ require_once('library/helsingborg-ajax.php');
 
 // Add custom meta-functions
 require_once('meta_boxes/meta-functions.php');
+
+// Add functions for samling_bokning_timeline pages, widgets
+require_once('library/samling_bokning_timeline.php');
+
 ?>
