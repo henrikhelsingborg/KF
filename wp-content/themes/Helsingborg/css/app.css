@@ -7603,6 +7603,9 @@ a.clickable_excerpt_text {
 .commentlist ul {
   list-style: none; }
 
+#commentform {
+  margin-bottom: 1.25rem; }
+
 /* Assets */
 /* 
  * Foundation Icons v 3.0
