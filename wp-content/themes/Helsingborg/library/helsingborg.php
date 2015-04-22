@@ -450,7 +450,7 @@ function the_breadcrumb() {
         if (is_category() || is_tag() || is_author() || is_single()) {
             echo '<li><a href="'.$blogPageURL.'">'.$blogPageTITLE.'</a></li>';
             if (is_category()) {
-            	echo '<li>'; the_category(' <li> ');
+            	echo '<li>'; single_cat_title(); echo '</li>';
             }
             if (is_tag()) {
 				echo '<li>'; single_tag_title(); echo '</li>';
