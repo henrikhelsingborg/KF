@@ -1,8 +1,8 @@
 <?php
 function Helsingborg_theme_support() {
     // Add language support
-    //load_theme_textdomain('Helsingborg', get_template_directory() . '/languages');
-    load_theme_textdomain('Helsingborg', content_url() . '/languages/themes');
+    //load_theme_textdomain('helsingborg', get_template_directory() . '/languages');
+    load_theme_textdomain('helsingborg', content_url() . '/languages');
     
 
     // Add menu support
@@ -19,6 +19,5 @@ function Helsingborg_theme_support() {
     //add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
 }
-
 add_action('after_setup_theme', 'Helsingborg_theme_support'); 
 ?>

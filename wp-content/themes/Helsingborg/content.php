@@ -20,7 +20,7 @@
 				</div>
 			</div>
 		<?php endif; ?>
-		<?php the_content(__('Continue reading...', 'Helsingborg')); ?>
+		<?php the_content(__('Continue reading...', 'helsingborg')); ?>
 	</div>
 	<footer>
 		<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>

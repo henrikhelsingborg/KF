@@ -13,8 +13,8 @@ function Helsingborg_pagination() {
 		'total' => $wp_query->max_num_pages,
 		'mid_size' => 5,
 		'prev_next' => True,
-	    'prev_text' => __('&laquo;', 'Helsingborg'),
-	    'next_text' => __('&raquo;', 'Helsingborg'),
+	    'prev_text' => __('&laquo;', 'helsingborg'),
+	    'next_text' => __('&raquo;', 'helsingborg'),
 		'type' => 'list'
 	) );
  
@@ -37,11 +37,11 @@ function Helsingborg_pagination() {
 function Helsingborg_menu_fallback() {
 	echo '<div class="alert-box secondary">';
 	// Translators 1: Link to Menus, 2: Link to Customize
-  	printf( __( 'Please assign a menu to the primary menu location under %1$s or %2$s the design.', 'Helsingborg' ),
-  		sprintf(  __( '<a href="%s">Menus</a>', 'Helsingborg' ),
+  	printf( __( 'Please assign a menu to the primary menu location under %1$s or %2$s the design.', 'helsingborg' ),
+  		sprintf(  __( '<a href="%s">Menus</a>', 'helsingborg' ),
   			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
   		),
-  		sprintf(  __( '<a href="%s">Customize</a>', 'Helsingborg' ),
+  		sprintf(  __( '<a href="%s">Customize</a>', 'helsingborg' ),
   			get_admin_url( get_current_blog_id(), 'customize.php' )
   		)
   	);

@@ -5,15 +5,15 @@
 			<header class="comment-author">
 				<?php echo get_avatar($comment,$size='48'); ?>
 				<div class="author-meta">
-					<?php printf(__('<cite class="fn">%s</cite>', 'Helsingborg'), get_comment_author_link()) ?>
-					<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s', 'Helsingborg'), get_comment_date(),  get_comment_time()) ?></a></time>
-					<?php edit_comment_link(__('(Edit)', 'Helsingborg'), '', '') ?>
+					<?php printf(__('<cite class="fn">%s</cite>', 'helsingborg'), get_comment_author_link()) ?>
+					<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s', 'helsingborg'), get_comment_date(),  get_comment_time()) ?></a></time>
+					<?php edit_comment_link(__('(Edit)', 'helsingborg'), '', '') ?>
 				</div>
 			</header>
 
 			<?php if ($comment->comment_approved == '0') : ?>
 				<div class="notice">
-					<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'Helsingborg') ?></p>
+					<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'helsingborg') ?></p>
 				</div>
 			<?php endif; ?>
 
@@ -31,12 +31,12 @@
 <?php
 // Do not delete these lines
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-		die (__('Please do not load this page directly. Thanks!', 'Helsingborg'));
+		die (__('Please do not load this page directly. Thanks!', 'helsingborg'));
 
 	if ( post_password_required() ) { ?>
 	<section id="comments">
 		<div class="notice">
-			<p class="bottom"><?php _e('This post is password protected. Enter the password to view comments.', 'Helsingborg'); ?></p>
+			<p class="bottom"><?php _e('This post is password protected. Enter the password to view comments.', 'helsingborg'); ?></p>
 		</div>
 	</section>
 	<?php
@@ -47,15 +47,15 @@
 
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
-		<h3><?php comments_number(__('No Responses to', 'Helsingborg'), __('One Response to', 'Helsingborg'), __('% Responses to', 'Helsingborg') ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+		<h3><?php comments_number(__('No Responses to','helsingborg'), __('One Response to','helsingborg'), __('% Responses to','helsingborg') ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
 		<ol class="commentlist">
 		<?php wp_list_comments('type=comment&callback=Helsingborg_comments'); ?>
 
 		</ol>
 		<footer>
 			<nav id="comments-nav">
-				<div class="comments-previous"><?php previous_comments_link( __( '&larr; Older comments', 'Helsingborg' ) ); ?></div>
-				<div class="comments-next"><?php next_comments_link( __( 'Newer comments &rarr;', 'Helsingborg' ) ); ?></div>
+				<div class="comments-previous"><?php previous_comments_link( __( '&larr; Older comments', 'helsingborg' ) ); ?></div>
+				<div class="comments-next"><?php next_comments_link( __( 'Newer comments &rarr;', 'helsingborg' ) ); ?></div>
 			</nav>
 		</footer>
 	</section>
@@ -63,34 +63,34 @@
 
 <?php if ( comments_open() ) : ?>
 <section id="respond">
-	<h3><?php comment_form_title( __('Leave a Reply', 'Helsingborg'), __('Leave a Reply to %s', 'Helsingborg') ); ?></h3>
+	<h3><?php comment_form_title( __('Leave a Reply', 'helsingborg'), __('Leave a Reply to %s', 'helsingborg') ); ?></h3>
 	<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-	<p><?php printf( __('You must be <a href="%s">logged in</a> to post a comment.', 'Helsingborg'), wp_login_url( get_permalink() ) ); ?></p>
+	<p><?php printf( __('You must be <a href="%s">logged in</a> to post a comment.', 'helsingborg'), wp_login_url( get_permalink() ) ); ?></p>
 	<?php else : ?>
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 		<?php if ( is_user_logged_in() ) : ?>
-		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'Helsingborg'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'Helsingborg'); ?>"><?php _e('Log out &raquo;', 'Helsingborg'); ?></a></p>
+		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'helsingborg'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'helsingborg'); ?>"><?php _e('Log out &raquo;', 'helsingborg'); ?></a></p>
 		<?php else : ?>
 		<p>
-			<label for="author"><?php _e('Name', 'Helsingborg'); if ($req) _e(' (required)', 'Helsingborg'); ?></label>
+			<label for="author"><?php _e('Name', 'helsingborg'); if ($req) _e(' (required)', 'helsingborg'); ?></label>
 			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>
-			<label for="email"><?php _e('Email (will not be published)', 'Helsingborg'); if ($req) _e(' (required)', 'Helsingborg'); ?></label>
+			<label for="email"><?php _e('Email (will not be published)', 'helsingborg'); if ($req) _e(' (required)', 'helsingborg'); ?></label>
 			<input type="text" class="five" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>
-			<label for="url"><?php _e('Website', 'Helsingborg'); ?></label>
+			<label for="url"><?php _e('Website', 'helsingborg'); ?></label>
 			<input type="text" class="five" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
 		</p>
 		<?php endif; ?>
 		<p>
-			<label for="comment"><?php _e('Comment', 'Helsingborg'); ?></label>
+			<label for="comment"><?php _e('Comment', 'helsingborg'); ?></label>
 			<textarea name="comment" id="comment" tabindex="4"></textarea>
 		</p>
-		<p id="allowed_tags" class="small"><strong>XHTML:</strong> <?php _e('You can use these tags:','Helsingborg'); ?> <code><?php echo allowed_tags(); ?></code></p>
-		<p><input name="submit" class="button" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e('Submit Comment', 'Helsingborg'); ?>"></p>
+		<p id="allowed_tags" class="small"><strong>XHTML:</strong> <?php _e('You can use these tags:','helsingborg'); ?> <code><?php echo allowed_tags(); ?></code></p>
+		<p><input name="submit" class="button" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e('Submit Comment', 'helsingborg'); ?>"></p>
 		<?php comment_id_fields(); ?>
 		<?php do_action('comment_form', $post->ID); ?>
 	</form>

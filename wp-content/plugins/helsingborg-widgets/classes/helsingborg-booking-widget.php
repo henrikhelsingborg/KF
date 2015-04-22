@@ -17,8 +17,8 @@ class HbgBookingWidget extends WP_Widget {
         add_action( 'widgets_init', array( $this, 'load_datepicker_sidebar_admin_setup' ) );	
 		parent::__construct(
 			'hbgbookingwidget', // Base ID
-			__('* Bokning', 'Helsingborg'), // Name
-			array( 'description' => __( 'Bookingswidget description', 'Helsingborg' ), ) // Args
+			__('* Bokning', 'helsingborg'), // Name
+			array( 'description' => __( 'Bookingswidget description', 'helsingborg' ), ) // Args
 		);
 	}	
     // Register widget
@@ -98,37 +98,37 @@ class HbgBookingWidget extends WP_Widget {
 			$show_placement = $instance[ 'show_placement' ];
 		}
 		else {
-			$show_placement = __( 'show_in_sidebar', 'Helsingborg' );
+			$show_placement = __( 'show_in_sidebar', 'helsingborg' );
 		}		
 		if ( isset( $instance[ 'title' ] ) ) {
 			$title = $instance[ 'title' ];
 		}
 		else {
-			$title = __( '', 'Helsingborg' );
+			$title = __( '', 'helsingborg' );
 		}
 		if ( isset( $instance[ 'datum' ] ) ) {
 			$datum = $instance[ 'datum' ];
 		}
 		else {
-			$datum = __( '', 'Helsingborg' );
+			$datum = __( '', 'helsingborg' );
 		}
 		if ( isset( $instance[ 'tid' ] ) ) {
 			$tid = $instance[ 'tid' ];
 		}
 		else {
-			$tid = __( '', 'Helsingborg' );
+			$tid = __( '', 'helsingborg' );
 		}
 		if ( isset( $instance[ 'pris' ] ) ) {
 			$pris = $instance[ 'pris' ];
 		}
 		else {
-			$pris = __( '', 'Helsingborg' );
+			$pris = __( '', 'helsingborg' );
 		}
 		if ( isset( $instance[ 'alternativpris' ] ) ) {
 			$alternativpris = $instance[ 'alternativpris' ];
 		}
 		else {
-			$alternativpris = __( '', 'Helsingborg' );
+			$alternativpris = __( '', 'helsingborg' );
 		}
 		if ( isset( $instance[ 'rubrik_kopknapp' ] ) ) {
 			$rubrik_kopknapp = $instance[ 'rubrik_kopknapp' ];
@@ -140,7 +140,7 @@ class HbgBookingWidget extends WP_Widget {
 			$lank_till_webbshop = $instance[ 'lank_till_webbshop' ];
 		}
 		else {
-			$lank_till_webbshop = __( '', 'Helsingborg' );
+			$lank_till_webbshop = __( '', 'helsingborg' );
 		}
 		
 		

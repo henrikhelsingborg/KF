@@ -6,10 +6,10 @@ function child_theme_enqueue_styles_and_scripts() {
     );
 }
 
-
+/*
 function debug_load_textdomain( $domain , $mofile  ){
     echo "Trying ",$domain," at ",$mofile,"<br />\n";
 }
 add_action('load_textdomain','debug_load_textdomain');
-
+*/
 ?>
