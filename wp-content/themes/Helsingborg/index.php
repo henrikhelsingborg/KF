@@ -8,12 +8,12 @@
 		<?php endwhile; ?>
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
-		<?php echo "do_action('Helsingborg_before_pagination') - before "; do_action('Helsingborg_before_pagination'); echo "do_action('Helsingborg_before_pagination') - after "; ?>
+		<?php echo "do_action('Helsingborg_before_pagination') - before "; //do_action('Helsingborg_before_pagination'); echo "do_action('Helsingborg_before_pagination') - after "; ?>
 	<?php endif;?>
 	<?php if ( function_exists('Helsingborg_pagination') ) { Helsingborg_pagination(); } else if ( is_paged() ) { ?>
 		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'helsingborg' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'helsingborg' ) ); ?></div>
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts','helsingborg' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;','helsingborg' ) ); ?></div>
 		</nav>
 	<?php } ?>
 	</div>

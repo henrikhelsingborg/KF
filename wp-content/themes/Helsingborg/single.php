@@ -23,7 +23,8 @@
 			</div>
 			<footer>
 				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'helsingborg'), 'after' => '</p></nav>' )); ?>
-				<p><?php the_tags(); ?></p>
+				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
+				<?php $categories = get_the_category(); if (!$categories) { } else { echo '<p>Kategorier: '; the_category(', '); echo '</p>'; } ?>
 			</footer>
 			<?php comments_template(); ?>
 		</article>

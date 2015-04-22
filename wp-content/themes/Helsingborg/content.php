@@ -24,6 +24,8 @@
 	</div>
 	<footer>
 		<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
+		
+		<?php $categories = get_the_category(); if (!$categories) { } else { echo '<p>Kategorier: '; the_category(', '); echo '</p>'; } ?>
 	</footer>
 	<hr />
 </article>
