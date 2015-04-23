@@ -63,7 +63,7 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 						for ($i = 0; $i < count($pages); $i++) {
 							$child_post = $pages[$i];
 							$child_post_id = $pages[$i]->ID; 
-							$link = get_permalink($post_id);
+							$link = get_permalink($child_post_id);
 							
 							// Get some meta data from child
 						    $visa_ingress_i_samling = get_post_meta($child_post_id, 'visa_ingress_i_samling');
@@ -100,10 +100,10 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 								if( $customize_sidebars[0]['meta_value'] == 'yes' ) {			
 									$sidebars_widgets = $wpdb->get_results("SELECT * FROM $wpdb->postmeta WHERE meta_key = '_sidebars_widgets' AND post_id ='$child_post_id'",ARRAY_A);	
 									$sidebars_widgetsUnserialized = unserialize($sidebars_widgets[0]['meta_value']);								
-									if (!$sidebars_widgetsUnserialized)	{ } else{
+									//if (!$sidebars_widgetsUnserialized)	{ } else{
 										$widget_id = checkforbookingwidget($sidebars_widgetsUnserialized);
-									}
-									if($widget_id != null ){			
+									//}
+									if($widget_id != null || $widget_id != ''){			
 										$bookingWidgetsOnThisPostInDatabase = 'widget_'.$child_post_id.'_hbgbookingwidget';			
 										$result = $wpdb->get_results("SELECT * FROM $wpdb->options WHERE option_name = '$bookingWidgetsOnThisPostInDatabase'",ARRAY_A);			
 										$result_ = unserialize($result[0]['option_value']);			
