@@ -4,7 +4,7 @@
   <input type="text" name="_helsingborg_meta[rss_select_name]" id="_helsingborg_meta[rss_select_name]" value="<?php echo $selected_name; ?>" style="width: 60%;" readonly>
   <input type="hidden" name="_helsingborg_meta[rss_select_id]" id="_helsingborg_meta[rss_select_id]" value="<?php echo $selected_id; ?>"><br><br>
 
-  <label for="helsingborg_meta_box_select"><b>Sök efter sida att hämta RSS från:</b></label><br>
+  <label for="helsingborg_meta_box_select"><b>Sök efter sida att hämta från:</b></label><br>
   <input style="width: 70%;" id="helsingborg_meta_box_search" type="text" class="input-text" />
   <button style="width: 25%;"
           type="button"
