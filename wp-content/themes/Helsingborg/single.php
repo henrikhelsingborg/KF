@@ -6,6 +6,7 @@
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<?php get_template_part('templates/partials/dividerfade','section'); ?>
 				<?php Helsingborg_entry_meta(); ?>
 			</header>
 			<?php do_action('Helsingborg_post_before_entry_content'); ?>
@@ -26,6 +27,7 @@
 				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
 				<?php $categories = get_the_category(); if (!$categories) { } else { echo '<p>Kategorier: '; the_category(', '); echo '</p>'; } ?>
 			</footer>
+			<?php get_template_part('templates/partials/dividerfade','section'); ?>
 			<?php comments_template(); ?>
 		</article>
 	<?php endwhile;?>
