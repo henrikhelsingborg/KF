@@ -21,6 +21,7 @@ include_once('classes/helsingborg-guides.php');
 include_once('classes/helsingborg-unfiltered-html.php');
 include_once('classes/helsingborg-text-widget.php');
 include_once('classes/helsingborg-booking-widget.php');
+include_once('classes/helsingborg-timeline-widget.php');
 include_once('helsingborg-settings.php');
 
 // Setup event handling
@@ -41,7 +42,7 @@ $Image_List         = new Image_List();
 $EventList          = new EventList();
 $HbgTextWidget      = new HbgTextWidget();
 $HbgBookingWidget   = new HbgBookingWidget();
-
+$HbgTimelineWidget   = new HbgTimelineWidget();
 
 function scripts_and_styles_link_list_widget(){
 	// Add resources used by link-list-widget
