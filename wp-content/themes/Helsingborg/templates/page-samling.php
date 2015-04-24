@@ -12,7 +12,7 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
     <!-- main-page-layout -->
     <div class="main-area large-12 columns">
 	    <div class="main-content row">
-	        <div class="large-12 medium-12 columns">
+	        <div class="large-12 medium-12 columns clearfix">
 	          	<div class="alert row"></div>
 			  	<?php get_template_part('templates/partials/header','image'); ?>
 	            <div class="row no-image"></div><!-- /.row -->
@@ -46,32 +46,34 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 				<?php if ( (is_active_sidebar('content-area') == TRUE) ) : ?>
                   <?php dynamic_sidebar("content-area"); ?>
                 <?php endif; ?>
-                
-                <?php include_once('dump_r.php'); //debugverktyg ska tas bort när allt är klart ?>
+
+				<?php
+				//Hämta vald Parent-node(page) från metaboxen på samlingssidan
+				$hbgMeta = get_post_meta($post->ID, '_helsingborg_meta', true); ?>
 				<section class="samlingssidor_output">
 					<ul class="row">		
 						<?php									
-						// Get the child pages
+						// Get the child pages of the chosen parent-node(page)
 						$pages = get_pages(array(
 						  'sort_order' => 'DESC',
 						  'sort_column' => 'post_modified',
-						  'child_of' => $post->ID,
+						  //'child_of' => $post->ID,
+						  'child_of' => $hbgMeta['rss_select_id'],
 						  'post_type' => 'page',
 						  'post_status' => 'publish')
 						);
-						// Go through all childs and compare with selected keys from page
+						// Go through all childs
 						for ($i = 0; $i < count($pages); $i++) {
 							$child_post = $pages[$i];
 							$child_post_id = $pages[$i]->ID; 
 							$link = get_permalink($child_post_id);
 							
-							// Get some meta data from child
-						    $visa_ingress_i_samling = get_post_meta($child_post_id, 'visa_ingress_i_samling');
-							?>
+							//Hämta (Ja eller Nej) så vi vet om ingress ska visas - (metabox "Visa Ingress" från Advanced Custom Fields plugin)							
+						    $visa_ingress_i_samling = get_post_meta($child_post_id, 'visa_ingress_i_samling'); ?>
 						<li class="small-12 medium-6 large-4 columns left samling_child_li">	
 							<div class="samling_child_content">				
 								<?php
-								// Try to get the thumbnail for the page	
+								// Try to get the thumbnail for the child-page	
 							    if (has_post_thumbnail( $child_post_id ) ) {
 							      $image_id = get_post_thumbnail_id( $child_post_id );
 							      $image = wp_get_attachment_image_src( $image_id, 'single-post-thumbnail' );
@@ -91,6 +93,7 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 									$excerpt = strip_tags($excerpt);		
 									$excerpt = shorten_Post_Content($excerpt,$link);		
 								}
+								//kolla om vi ska visa ingressen
 								if($visa_ingress_i_samling[0] != 'Nej'){	
 									echo '<p class="samling_child_excerpt">'.$excerpt.'</p>'; 
 								}
@@ -99,10 +102,9 @@ $content = $the_content['extended']; // If content is empty, no <!--more--> tag 
 								$customize_sidebars = $wpdb->get_results("SELECT meta_value FROM $wpdb->postmeta WHERE meta_key = '_customize_sidebars' AND post_id ='$child_post_id'",ARRAY_A);	
 								if( $customize_sidebars[0]['meta_value'] == 'yes' ) {			
 									$sidebars_widgets = $wpdb->get_results("SELECT * FROM $wpdb->postmeta WHERE meta_key = '_sidebars_widgets' AND post_id ='$child_post_id'",ARRAY_A);	
-									$sidebars_widgetsUnserialized = unserialize($sidebars_widgets[0]['meta_value']);								
-									//if (!$sidebars_widgetsUnserialized)	{ } else{
-										$widget_id = checkforbookingwidget($sidebars_widgetsUnserialized);
-									//}
+									$sidebars_widgetsUnserialized = unserialize($sidebars_widgets[0]['meta_value']);									
+									$widget_id = checkforbookingwidget($sidebars_widgetsUnserialized);
+									
 									if($widget_id != null || $widget_id != ''){			
 										$bookingWidgetsOnThisPostInDatabase = 'widget_'.$child_post_id.'_hbgbookingwidget';			
 										$result = $wpdb->get_results("SELECT * FROM $wpdb->options WHERE option_name = '$bookingWidgetsOnThisPostInDatabase'",ARRAY_A);			
